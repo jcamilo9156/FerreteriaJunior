@@ -65,13 +65,16 @@ i {
     position: relative;
 }
 @media screen and (max-width:768px) {
+    body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
+    }
     input{ height: 30px;}
     footer {
         background-color: black;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 40px;
-        color: white;
-      } 
+    }
+      .submit { 
+margin-left: 42%;
+      }
 }
