@@ -73,6 +73,7 @@ i {
         min-height:100vh;
         border-style: solid;
         color: red;
+        position: relative;
     }
 
     input{
