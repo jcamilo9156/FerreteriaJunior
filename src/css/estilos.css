@@ -8,6 +8,9 @@ body{
     font-family: 'PT Sans', sans-serif;
     
 }
+.main-container{
+    min-height: 100%;
+}
 
 h1 {
     color: white;
@@ -56,10 +59,9 @@ input{
 
 footer{
     text-align: center;
-    bottom: 0%;
     color: white;
     width: 100%;
-    position:absolute;
+    position:relative;
 }
 i {
     position: relative;
@@ -67,11 +69,13 @@ i {
 @media screen and (max-width:768px) {
     body {
         display: grid;
-        min-height: 100vh;
+        min-height: 100%;
         grid-template-rows: auto 1fr auto;
     }
     input{ height: 30px;}
     footer {
+        position: fixed;
+      bottom: 0%;
         background-color: black;
     }
       .submit { 
