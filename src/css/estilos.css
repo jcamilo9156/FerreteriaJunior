@@ -78,6 +78,7 @@ i {
          margin: 10px;
         }
     footer {
+        display: none;
         padding: 20px;
       bottom: 0%;
       position: absolute;
