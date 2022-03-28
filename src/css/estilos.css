@@ -69,16 +69,16 @@ i {
     position: relative;
 }
 @media screen and (max-width:768px) {
-    body {
-        display: grid;
-        min-height: 100%;
-        grid-template-rows: auto 1fr auto;
+    .main-container {
+        min-height: calc(100vh-20px);
     }
+
     input{
          height: 30px;
          margin: 10px;
         }
     footer {
+        padding: 20px;
       bottom: 0%;
       position: absolute;
         background-color: black;
@@ -86,8 +86,4 @@ i {
       .submit { 
 margin-left: 42%;
       }
-
- input::placeholder{
-     font-style: bold;
- }
 }
