@@ -70,7 +70,7 @@ i {
 }
 @media screen and (max-width:768px) {
     .main-container {
-        min-height: 90vh;
+        min-height:100vh;
         border-style: solid;
         color: red;
     }
