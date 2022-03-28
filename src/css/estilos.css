@@ -79,8 +79,8 @@ i {
          margin: 10px;
         }
     footer {
-       
-      bottom: 0%;
+      
+      position: absolute;
         background-color: black;
     }
       .submit { 
