@@ -70,7 +70,9 @@ i {
 }
 @media screen and (max-width:768px) {
     .main-container {
-        min-height: calc(100vh-20px);
+        min-height: 90vh;
+        border-style: solid;
+        color: red;
     }
 
     input{
@@ -78,11 +80,11 @@ i {
          margin: 10px;
         }
     footer {
-        display: none;
-        padding: 20px;
-      bottom: 0%;
+        height: 20px;
+      bottom: 0;
       position: absolute;
         background-color: black;
+       
     }
       .submit { 
 margin-left: 42%;
