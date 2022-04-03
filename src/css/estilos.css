@@ -6,7 +6,7 @@
 }
 html{
     height: 100%;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 body{
 background-color: #4395F6;   
@@ -78,7 +78,8 @@ footer{
     font-weight:bolder;
     color: aliceblue;
     text-align: center;
-    bottom: 0;
-    position: fixed;
+    bottom: 0px;
+    position: relative;
+   
 }
 
