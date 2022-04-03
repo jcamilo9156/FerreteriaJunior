@@ -2,102 +2,77 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'PT Sans';
+}
+html{
+    height: 100%;
+    overflow-y: hidden;
 }
 body{
-    background-color:#4395F6;
-    font-family: 'PT Sans', sans-serif;
-    min-height: 100%;
-    
-}
-.main-container{
-  
- min-height:100vh;
-        border-style: solid;
-        color: red;
-      
-    }
+background-color: #4395F6;   
+min-height: 100%;
+position: relative;
 
-
-h1 {
-    color: white;
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 6rem;
-    text-shadow:black 5px 5px 5px 5px;
-    
 }
 
-.campologin{
-    text-align: center;
-    color: white;
-    width: 100%;
-    border: solid red
-}
-
-.submit{
-    color:white;
-    background-color: yellowgreen;
-    display: flex;
-    margin-top: 10px;
-    margin-left: 47%;
-padding: 15px 15px 15px 15px;
-cursor: pointer;
-transition: color .5s;
-width: 6rem;
-}
-
-.submit:hover{
-    
-    color: black;
-}
-input{
-    height: 20px;
-    border-style:none;
-    border-radius: 10rem;
-    padding: 5px;
-    outline:none;
-    text-align: center;
-    margin-left: 5px;
-    margin-top: 5px;
-}
-::placeholder {
-    text-align: center;
-   font-style: italic;    
-}
 
 footer{
-    text-align: center;
-    color: white;
     width: 100%;
+    font-weight:bolder;
+    color: aliceblue;
+    text-align: center;
     bottom: 0;
-        height: 30px;
-      bottom: 0;
-        background-color: black;
-       
-    }
+    position: fixed;
 }
-i {
-    position: relative;
-}
-@media screen and (max-width:768px) {
-    .main-container {
-        min-height:100vh;
-        border-style: solid;
-        color: red;
-      
-    }
 
-    input{
-         height: 30px;
-         margin: 10px;
-        }
-    footer {
-        height: 30px;
-      bottom: 0;
-        background-color: black;
-       
-    }
-      .submit { 
-margin-left: 42%;
-      }
+.input-container{
+    margin-top:10px;
+    height: 30px;
+}
+
+input{
+border-radius: 20px;
+border-style: none;
+    text-align: center;
+   outline: none;
+}
+
+input:hover{
+    outline-style: auto;
+    outline-color: red;
+    outline-width: 1.5px;
+    transition: 1s;
+}
+
+.titulo-login{
+      background-color: gray;
+      margin-top: 80px;
+      text-align: center;
+      color: aliceblue;
+      max-width: 100%;
+      height: 100px;
+  }
+
+
+
+.form-login{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* background-color: gray;*/
+    max-width: 
+100%;
+}
+.form-login h2{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+   color: aliceblue;
+}
+.important{
+    color:red;
+    font-size: 8px;
+    margin-top: 2px;
+    font-weight: bold;
 }
