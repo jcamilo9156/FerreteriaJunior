@@ -1,3 +1,9 @@
+:root{
+--color-principal:#4395F6;
+--color-secudario:aliceblue;
+--iconos-landing: 80px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,15 +12,26 @@
 }
 html{
     height: 100%;
-  /*  overflow-y: hidden;*/
+
 }
 body{
-background-color: #4395F6;   
+    background-color: white;
+    min-height: 100%;
+position: relative;
+padding-bottom: 50px;
+}
+span{
+    margin: 0;
+    width: 0;
+}
+.login-index{
+background-color: var(--color-principal);   
 min-height: 100%;
 position: relative;
 padding-bottom: 50px;
-
+overflow-y: hidden;
 }
+
 .titulo-login{
     margin-top: 80px;
     text-align: center;
@@ -82,9 +99,95 @@ input:hover{
     background-color: black;
     position: fixed;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 768px){
     .footer-login{
         position: absolute;
 }
 
+}
+/* Para colocar asteriscos en rojo 
+.required{
+    color: red;
+    font-size: 20px;
+    cursor:default;
+}*/
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    background-color: var(--color-principal);
+}
+.bienvenida{
+    margin-right: 10px;
+    color: var(--color-secudario);
+    font-weight:bold;
+}
+.fa-circle-user{
+    margin-right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.fa-user-plus{
+    font-size: var(--iconos-landing);
+
+}
+
+.iconos-opciones{
+    font-size: 60px;
+    color:var(--color-principal);
+    cursor:pointer;
+}
+.iconos-opciones:hover{
+    padding: 3px;
+    color: black;
+    transition: 0.5s;
+}
+
+.container .opciones{
+    display: flex;
+  text-align: right;
+}
+.titulo-opciones{
+ 
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 200px;
+    max-width: 30%;
+    
+}
+.opciones{
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    
+}
+.caja{
+   
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+.caja p{
+  margin-left: 80px;
+  margin-top: 15px;
+    text-decoration: dashed;
+    font-size: 25px;
+    font-weight: bold;
+}
+.opciones .ultima{
+    grid-column: span 2;
+}
+/*.caja a{
+    text-decoration: none;
+    display: flex;
+    cursor: default;
 }
