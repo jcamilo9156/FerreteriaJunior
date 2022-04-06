@@ -100,10 +100,11 @@ input:hover{
     position: fixed;
 }
 @media screen and (max-width: 768px){
-  
+    .footer-login{
+        position: relative;
 }
 
-
+}
 /* Para colocar asteriscos en rojo 
 .required{
     color: red;
