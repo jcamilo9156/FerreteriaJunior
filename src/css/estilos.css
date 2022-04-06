@@ -98,8 +98,13 @@ input:hover{
     background-color: black;
     position: fixed;
 }
-@media screen and (max-width: 768px){
-    
+@media screen and (max-width: 800px){
+    .titulo-opciones{
+        min-width: 100%;
+    }
+    .contenido{
+        min-width: 100%;
+    }
 }
 
 
