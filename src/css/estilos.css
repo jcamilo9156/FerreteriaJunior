@@ -101,7 +101,7 @@ input:hover{
 }
 @media screen and (max-width: 768px){
     .footer-login{
-        position: absolute;
+        position: relative;
 }
 
 }
