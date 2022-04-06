@@ -98,14 +98,6 @@ input:hover{
     background-color: black;
     position: fixed;
 }
-@media screen and (max-width: 800px){
-    .titulo-opciones{
-        max-width: 100%;
-    }
-    .contenido{
-        max-width: 100%;
-    }
-}
 
 
 /* Para colocar asteriscos en rojo 
@@ -189,8 +181,36 @@ header{
 .opciones .ultima{
     grid-column: span 2;
 }
+@media screen and (max-width: 800px){
+    .main-container{
+        margin: 0;
+        max-width: 100%;
+        border-style: dashed;
+        border-color: red;
+    }
+    .opciones{
+    display:block;
+    justify-content: center;
+        margin: auto;
+    }
+    .caja{
+        display: flex;
+        justify-content: center;
+        background-color: gray;
+        max-width: 80%;
+        margin-bottom: 40px;
+    }
+    .caja1{
+        border-style: dashed;
+        border-color: red;
+        
+    }
+    .caja2{
+        border-style: dashed;
+        border-color: red;
+}
 /*.caja a{
     text-decoration: none;
     display: flex;
     cursor: default;
-}
+} */
