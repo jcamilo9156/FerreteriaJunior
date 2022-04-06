@@ -102,7 +102,7 @@ input:hover{
     
 }
 
-}
+
 /* Para colocar asteriscos en rojo 
 .required{
     color: red;
@@ -163,7 +163,7 @@ header{
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
-    grid-auto-rows: minmax(100px, auto);
+    
     
 }
 .caja{
