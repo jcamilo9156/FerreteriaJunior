@@ -100,10 +100,10 @@ input:hover{
 }
 @media screen and (max-width: 800px){
     .titulo-opciones{
-        min-width: 100%;
+        max-width: 100%;
     }
     .contenido{
-        min-width: 100%;
+        max-width: 100%;
     }
 }
 
