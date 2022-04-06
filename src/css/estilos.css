@@ -94,14 +94,13 @@ input:hover{
     color: aliceblue;
     text-align: center;
     bottom: 0px;
-    position: absolute;
     height: 30px;
     background-color: black;
     position: fixed;
 }
 @media screen and (max-width: 768px){
     .footer-login{
-        position: relative;
+        position: absolute;
 }
 
 }
