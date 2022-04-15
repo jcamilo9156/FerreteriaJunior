@@ -98,37 +98,55 @@ input:hover{
     background-color: black;
     position: fixed;
 }
-
-
-/* Para colocar asteriscos en rojo 
-.required{
-    color: red;
-    font-size: 20px;
-    cursor:default;
-}*/
-header{
+footer{
     width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: right;
-    padding: 10px;
-    background-color: var(--color-principal);
+    font-weight:bolder;
+    color: aliceblue;
+    text-align: center;
+    bottom: 0px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
 }
-.bienvenida{
-    margin-right: 10px;
+
+
+
+header{
     color: var(--color-secudario);
     font-weight:bold;
+    width: 100%;
+    height: 50px;
+    padding:0 10px;
+    background-color: var(--color-principal);
 }
+.header-bienvenida{
+    display: flex;
+    justify-content: right;
+    line-height: 50px;
+}
+.opciones-usuario{
+    display: block;
+    margin-top: 60px;
+    background-color: #c7bb1a;
+}
+.opciones-usuario a{
+    text-decoration: none;
+    color:black;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
 .fa-circle-user{
     margin-right: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
     font-size: 20px;
     cursor: pointer;
-    
+    color: black;
 }
-.fa-user-plus{
-    font-size: var(--iconos-landing);
 
-}
+
 
 .iconos-opciones{
     font-size: 60px;
@@ -181,13 +199,130 @@ header{
 .opciones .ultima{
     grid-column: span 2;
 }
+
+.opciones-usuario li{
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+/*.caja a{
+    text-decoration: none;
+    display: flex;
+    cursor: default;
+} */
+
+
+
+
+/* Estilos Formularios */
+
+.form-mod-usuarios{
+margin-left: 50px;
+margin-top: 100px;
+ max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-mod-usuarios input{
+    margin-top: 10px;
+    border-style:ridge;
+}
+.form-mod-usuarios input:hover{
+    outline-color: var(--color-principal);
+    outline-width: 1.5px;
+    transition: 0.1s;
+}
+.form-mod-usuarios select{
+    margin-top: 10px;
+}  
+.titulo-modulos{
+  text-align: center;
+}
+fieldset{
+    border-radius: 20px;
+    border-color: var(--color-principal);
+    border-width: 2px;
+
+    border-style:double;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.required{
+    color: red;
+    font-size: 15px;
+    cursor:default;
+    margin-left: 5px;
+}
+
+select{
+    border-radius: 10px;
+   
+    margin-bottom: 0px;
+    height: 26px;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px;
+}
+
+select:hover{
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 1.5px;
+    transition: 0.8s;
+}
+.botones-formulario{
+    grid-column: 2/4;
+}
+.iconos-formularios{
+    font-size: 50px;
+    
+}
+.borrar{
+    color: red;
+}
+.guardar{
+    color: #c7bb1a;
+}
+
+.boton-formulario{
+    margin-right: 5px;
+    margin-left: 60px;
+    border: none;
+    background: none;
+}   
+.boton-formulario:hover{
+    cursor: pointer;
+}   
+
+
+
+
+
+
+
+/*
 @media screen and (max-width: 800px){
     .main-container{
-        margin: 0 auto;
         max-width: 100%;
-        border-style: dashed;
+        border-style:solid;
         border-color: red;
+        border-width: 5px;
         margin-bottom:330px;
+    }
+}
+    .titulo-opciones{
+        margin: 0;
+        width: 100%;
+        color: red;
+        background-color: gray;
     }
     .opciones{
     display:block;
@@ -211,11 +346,4 @@ header{
         border-style: dashed;
         border-color: red;
 }
-.footer{
-    bottom: 0;
-}
-/*.caja a{
-    text-decoration: none;
-    display: flex;
-    cursor: default;
-} */
+
