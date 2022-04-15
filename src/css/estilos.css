@@ -74,20 +74,21 @@ input:hover{
     outline-width: 1.5px;
     transition: 0.8s;
 }
-.input-container .button{
+.boton-inicio{
     width: 110px;
     background-color: #c7bb1a;
-    outline: none;
+    border-radius: 20px;
+    border: solid 2px  #c7bb1a;
     cursor: pointer;
     font-weight: bold;
 }
-.input-container .button:hover{
-    outline: none;
+.boton-inicio:hover{
+  border-color: black;
     font-weight: bold;
-    color: aliceblue;
     transition: 0.5s;
-    font-weight: lighter;
+    font-weight:bold;
 }
+
 .footer-login{
     width: 100%;
     font-weight:bolder;
@@ -206,12 +207,6 @@ header{
     display: flex;
     flex-direction: column;
 }
-/*.caja a{
-    text-decoration: none;
-    display: flex;
-    cursor: default;
-} */
-
 
 
 
@@ -304,7 +299,9 @@ select:hover{
 .boton-formulario:hover{
     cursor: pointer;
 }   
-
+.correo{
+    padding: 10px;
+}
 
 
 
