@@ -353,7 +353,7 @@ select:hover{
 
 
 
-/*
+
 @media screen and (max-width: 800px){
     .main-container{
         max-width: 100%;
@@ -364,10 +364,7 @@ select:hover{
     }
 }
     .titulo-opciones{
-        margin: 0;
         width: 100%;
-        color: red;
-        background-color: gray;
     }
     .opciones{
     display:block;
@@ -377,18 +374,11 @@ select:hover{
     .caja{
         display: flex;
         justify-content: center;
-        background-color: gray;
+       
         max-width: 80%;
         margin-bottom: 40px;
         height: auto;
     }
-    .caja1{
-        border-style: dashed;
-        border-color: red;
-        
-    }
-    .caja2{
-        border-style: dashed;
-        border-color: red;
+         
 }
 
