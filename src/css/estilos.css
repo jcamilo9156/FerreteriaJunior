@@ -74,7 +74,24 @@ input:hover{
     outline-width: 1.5px;
     transition: 0.8s;
 }
-.boton-inicio{
+.href-index{
+    text-decoration: none;
+   
+    width: 110px;
+    background-color: #c7bb1a;
+    border-radius: 20px;
+    border: solid 2px  #c7bb1a;
+    cursor: pointer;
+    font-weight: bold;
+}
+.href-index:hover{
+    text-decoration: none;
+border-color: black;
+font-weight: bold;
+transition: 0.5s;
+font-weight:bold;
+}
+/*.boton-inicio{
     width: 110px;
     background-color: #c7bb1a;
     border-radius: 20px;
@@ -88,7 +105,7 @@ input:hover{
     transition: 0.5s;
     font-weight:bold;
 }
-
+*/
 .footer-login{
     width: 100%;
     font-weight:bolder;
@@ -122,9 +139,34 @@ header{
 }
 .header-bienvenida{
     display: flex;
+    flex-direction: row;
     justify-content: right;
     line-height: 50px;
 }
+.header-bienvenida p{
+    font-size: 20px;
+    margin-right: 20px;
+    
+}
+.user{
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+    padding-bottom: 5px;
+}
+.home{
+    margin-top: 13px;
+    margin-right: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+
+
+/*
 .opciones-usuario{
     display: block;
     margin-top: 60px;
@@ -136,18 +178,7 @@ header{
     padding-right: 10px;
     padding-left: 10px;
 }
-
-
-.fa-circle-user{
-    margin-right: 30px;
-    margin-top: 15px;
-    margin-left: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    color: black;
-}
-
-
+*/
 
 .iconos-opciones{
     font-size: 60px;
@@ -235,6 +266,7 @@ margin-top: 30px;
 }
 .form-mod-usuarios select{
     margin-top: 10px;
+    border-width: 1.8px;
 }  
 .titulo-modulos{
   text-align: center;
@@ -302,8 +334,21 @@ select:hover{
 .correo{
     padding: 10px;
 }
+.buscar{
+    margin:40px;
+    font-size: 20px;
+}
 
-
+.footer-forms{
+    width: 100%;
+    font-weight:bolder;
+    color: aliceblue;
+    text-align: center;
+    bottom: 0px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+}
 
 
 
