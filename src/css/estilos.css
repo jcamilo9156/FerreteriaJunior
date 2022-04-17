@@ -215,8 +215,8 @@ header{
 }
 .caja{
    
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
     padding: 10px;
     margin: 0 auto;
@@ -351,24 +351,21 @@ select:hover{
 }
 
 @media screen and (max-width:480px){
-    .main-container{
-        max-width: 100%;
-    }
-
+   
     .opciones{
     display:grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-        margin: auto;
+        max-width: 50% 50% 50% 50%;
     }
     .caja{
         display: flex;
         justify-content: center;
-        max-width: 80%;
         margin-bottom: 40px;
         
     }
      .titulo{
-         display: flex;
+         
      }    
 }
 
