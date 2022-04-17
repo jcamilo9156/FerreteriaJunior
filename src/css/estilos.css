@@ -350,22 +350,12 @@ select:hover{
     position: absolute;
 }
 
-
-
-
-
-@media screen and (max-width: 800px){
+@media screen and (max-width: 90px){
     .main-container{
         max-width: 100%;
-        border-style:solid;
-        border-color: red;
-        border-width: 5px;
-        margin-bottom:330px;
     }
-}
-    .titulo-opciones{
-        width: 100%;
-    }
+
+
     .opciones{
     display:block;
     justify-content: center;
@@ -374,7 +364,6 @@ select:hover{
     .caja{
         display: flex;
         justify-content: center;
-       
         max-width: 80%;
         margin-bottom: 40px;
         height: auto;
