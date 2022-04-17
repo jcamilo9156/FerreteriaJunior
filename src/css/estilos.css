@@ -350,14 +350,13 @@ select:hover{
     position: absolute;
 }
 
-@media screen and (max-width: 90px){
+@media screen and (max-width:480px){
     .main-container{
         max-width: 100%;
     }
 
-
     .opciones{
-    display:block;
+    display:grid;
     justify-content: center;
         margin: auto;
     }
@@ -366,8 +365,10 @@ select:hover{
         justify-content: center;
         max-width: 80%;
         margin-bottom: 40px;
-        height: auto;
+        
     }
-         
+     .titulo{
+         display: flex;
+     }    
 }
 
