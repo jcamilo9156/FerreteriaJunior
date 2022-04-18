@@ -204,21 +204,30 @@ header{
 }
 */
 /* Landing */
-.contenedor-landing{
-    border: 10px black solid;
+.contenedor-opciones{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:repeat(1, 1fr);
+   border: 5px solid red;
+   text-align: center;
+   row-gap: 40px;
+   column-gap: 10px;
 }
-
-
+.contenedor-opciones p{
+    font-weight: bold;   
+      }
+      .ultima{
+        grid-column: 1/3;
+        margin-bottom: 10px;
+        }
 .iconos-opciones{
+margin-right: 50px;
     font-size: 60px;
     color:var(--color-principal);
     cursor:pointer;
 }
 .iconos-opciones:hover{
-    padding: 2px;
+
     color: black;
     transition: 0.5s;
 }
@@ -229,23 +238,20 @@ header{
 
 
 /* Media query para celulares en landing*/
-@media screen and (max-width:480px){
+/* @media screen and (max-width:480px){
 
-    .opciones{
+    .contenedor-opciones{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-        max-width: 50% 50% 50% 50%;
+    grid-template-rows: repeat(3, 1fr);
+       
     }
-    .caja{
-      
-        justify-content: center;
-        margin-bottom: 40px;
-        
+    
+    .iconos-opciones:hover{
+        color: black;
+        transition: 0.5s;
     }
-     .titulo{
-         
-     }    
+   
 }
 
 /* Cierre Landing /*
@@ -341,6 +347,11 @@ fieldset{
     font-size: 20px;
 }
 /* Fin estilo formularios*/
+
+
+
+
+
 .footer-forms{
     width: 100%;
     font-weight:bolder;
