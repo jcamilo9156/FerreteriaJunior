@@ -23,46 +23,45 @@
             Gestión de Clientes
         </h1>   
         <fieldset><legend>Formulario Registro Clientes</legend>
-<form action="" class="form-mod-usuarios">
+<form action="" class="forms">
 
-<div class="campo-form">
+<div>
     <label for="name">Nombres</label><span class="required">*</span><br>
-    <input type="text" name="" id="name" placeholder="Juan Camilo" class="input-formularios" autofocus autocapitalize="characters">
+    <input type="text" name="" id="name" placeholder="Juan Camilo" class="input-formularios" autofocus required>
 </div>
-<div class="campo-form">
+<div>
     <label for="Apellidos">Apellidos</label><span class="required">*</span><br>
-    <input type="text" name="" id="Apellidos" placeholder="Quezada Barreto" class="input-formularios">
+    <input type="text" name="" id="Apellidos" placeholder="Quezada Barreto" class="input-formularios"required>
 </div>
-<div class="campo-form">
+<div>
     <label for="razonsocial">Razón Social</label><br>
     <input type="text" name="" id="razon-social" placeholder=" " class="input-formularios">
 </div>
-<div class="campo-form">
+<div>
     <label for="id">Tipo Identificación</label><span class="required">*</span><br>
-    <select>
+    <select class="select-formularios">
         <option value="Cedula">Cédula Ciudadanía</option>
-        <option value="Cedula">NIT</option>
-        <option value="Cedula">RUT</option>
-        <option value="Cedula">Cédula Extranjería</option>
+        <option value="NIT">NIT</option>
+        <option value="RUT">RUT</option>
+        <option value="Cedula_EXT">Cédula Extranjería</option>
     </select>
 </div>
 
-<div class="campo-form">
+<div>
     <label for="id">Identificación</label><span class="required">*</span><br>
     <input type="text" name="" id="id" placeholder="1234567890" class="input-formularios" maxlength="10">
 </div>
-<div class="campo-form">
+<div>
     <label for="direccion">Dirección</label><span class="required">*</span><br>
     <input type="text" name="" id="direccion" placeholder="Carrera 19 # 35-40" class="input-formularios">
 </div>
-<div class="campo-form">
+<div>
     <label for="barrio">Barrio</label><br>
     <input type="text" name="" id="barrio" placeholder="Belén" class="input-formularios">
 </div>
-<div class="campo-form">
-    <div class="campo-form">
+<div>
         <label for="city">Ciudad</label><span class="required">*</span><br>
-        <select>
+        <select class="select-formularios">
             <option value="Villavicencio">Villavicencio</option>
             <option value="Bogotá">Bogotá</option>
             <option value="Arauca">Arauca</option>
@@ -96,19 +95,18 @@
             <option value="Valledupar">Valledupar</option>
             <option value="Yopal">Yopal</option>
         </select>
-    </div>
 </div>
-<div class="campo-form">
+<div>
     <label for="tel">Teléfono</label><br>
     <input type="tel" id="tel" placeholder="3005958121" class="input-formularios">
 </div>
-<div class="campo-form">
+<div>
     <label for="e-mail">Correo</label><span class="required">*</span><br>
     <input type="email" id="e-mail" placeholder="jcquezada@misena.edu.co" class="input-formularios correo" >
 </div>
-<div class="campo-form">
+<div>
     <label for="id">Tipo Cliente</label><span class="required">*</span><br>
-    <select>
+    <select class="select-formularios">
         <option value="Cedula">Persona Natural</option>
         <option value="Cedula">Empresa</option>
     </select>
@@ -127,10 +125,10 @@
     <h2 class="titulo-modulos">Actualización de Información de Clientes</h2>
 </div>
 <fieldset><legend>Formulario Actualización Clientes</legend>
-    <form action="" class="form-mod-usuarios">
+    <form action="" class="forms">
        <div class=" campo-form">
         <label for="">Buscar Cliente</label><br>
-        <input type="search" name="" id="" placeholder="Digitar Identificación" autofocus maxlength="10" minlength="9">
+        <input type="search" name="" id="" placeholder="Digitar Identificación" autofocus maxlength="10" minlength="9" class="input-formularios">
     </div>
     <div class="campo-form">
         <label for="name">Nombres</label><span class="required">*</span><br>
@@ -146,7 +144,7 @@
     </div>
     <div class="campo-form">
         <label for="id">Tipo Identificación</label><span class="required">*</span><br>
-        <select>
+        <select class="select-formularios">
             <option value="Cedula">Cédula Ciudadanía</option>
             <option value="Cedula">NIT</option>
             <option value="Cedula">RUT</option>
@@ -169,7 +167,7 @@
     <div class="campo-form">
         <div class="campo-form">
             <label for="city">Ciudad</label><span class="required">*</span><br>
-            <select>
+            <select class="select-formularios">
                 <option value="Villavicencio">Villavicencio</option>
                 <option value="Bogotá">Bogotá</option>
                 <option value="Arauca">Arauca</option>
@@ -215,7 +213,7 @@
     </div>
     <div class="campo-form">
         <label for="id">Tipo Cliente</label><span class="required">*</span><br>
-        <select>
+        <select class="select-formularios">
             <option value="Cedula">Persona Natural</option>
             <option value="Cedula">Empresa</option>
         </select>

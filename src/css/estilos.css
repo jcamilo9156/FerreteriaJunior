@@ -1,9 +1,11 @@
+/* Variables */
 :root{
 --color-principal:#4395F6;
 --color-secudario:aliceblue;
 --iconos-landing: 80px;
 }
 
+/* Globales*/
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +26,42 @@ span{
     margin: 0;
     width: 0;
 }
+input{
+    border-radius: 20px;
+        text-align: center;
+       height: 25px;
+       outline: none;
+    }
+    footer{
+        width: 100%;
+        font-weight:bolder;
+        color: aliceblue;
+        text-align: center;
+        bottom: 0px;
+        height: 30px;
+        background-color: black;
+        position: absolute;
+    }
+    select{
+        border-radius: 10px;
+       
+        margin-bottom: 0px;
+        height: 26px;
+        text-align: center;
+        border-style: solid;
+        border-color: black;
+        border-width: 1.5px;
+    }
+    
+    select:hover{
+        outline-style: solid;
+        outline-color: black;
+        outline-width: 1.5px;
+        transition: 0.8s;
+    }
+/* Fin Globales */
+/*Login*/
+
 .login-index{
 background-color: var(--color-principal);   
 min-height: 100%;
@@ -60,17 +98,11 @@ overflow-y: hidden;
 .input-container i{
     margin-right: 5px;
 }
-input{
-border-radius: 20px;
-border-style: none;
-    text-align: center;
-   outline: none;
-   height: 25px;
-}
 
-input:hover{
-    outline-style: auto;
-    outline-color: red;
+
+.input-formularios:hover{
+    outline-style: solid;
+    outline-color: green;
     outline-width: 1.5px;
     transition: 0.8s;
 }
@@ -91,7 +123,8 @@ font-weight: bold;
 transition: 0.5s;
 font-weight:bold;
 }
-/*.boton-inicio{
+
+.boton-inicio{
     width: 110px;
     background-color: #c7bb1a;
     border-radius: 20px;
@@ -105,7 +138,7 @@ font-weight:bold;
     transition: 0.5s;
     font-weight:bold;
 }
-*/
+
 .footer-login{
     width: 100%;
     font-weight:bolder;
@@ -116,16 +149,7 @@ font-weight:bold;
     background-color: black;
     position: fixed;
 }
-footer{
-    width: 100%;
-    font-weight:bolder;
-    color: aliceblue;
-    text-align: center;
-    bottom: 0px;
-    height: 30px;
-    background-color: black;
-    position: absolute;
-}
+
 
 
 
@@ -179,6 +203,14 @@ header{
     padding-left: 10px;
 }
 */
+/* Landing */
+.contenedor-landing{
+    border: 10px black solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
 
 .iconos-opciones{
     font-size: 60px;
@@ -186,64 +218,43 @@ header{
     cursor:pointer;
 }
 .iconos-opciones:hover{
-    padding: 3px;
+    padding: 2px;
     color: black;
     transition: 0.5s;
 }
 
-.container .opciones{
-    display: flex;
-  text-align: right;
-}
-.titulo-opciones{
- 
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 200px;
-    max-width: 30%;
-    
-}
-.opciones{
-    
-    display: grid;
+
+
+
+
+
+/* Media query para celulares en landing*/
+@media screen and (max-width:480px){
+
+    .opciones{
+    display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    
-    
-}
-.caja{
-   
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto;
-}
-.caja p{
-  margin-left: 80px;
-  margin-top: 15px;
-    text-decoration: dashed;
-    font-size: 25px;
-    font-weight: bold;
-}
-.opciones .ultima{
-    grid-column: span 2;
+    justify-content: center;
+        max-width: 50% 50% 50% 50%;
+    }
+    .caja{
+      
+        justify-content: center;
+        margin-bottom: 40px;
+        
+    }
+     .titulo{
+         
+     }    
 }
 
-.opciones-usuario li{
-    list-style: none;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
+/* Cierre Landing /*
 
 
 
 /* Estilos Formularios */
 
-.form-mod-usuarios{
+.forms{
 margin-left: 50px;
 margin-top: 30px;
  max-width: 90%;
@@ -254,20 +265,29 @@ margin-top: 30px;
     text-align: center;
     margin-bottom: 20px;
 }
-
-.form-mod-usuarios input{
+.input-formularios{
     margin-top: 10px;
-    border-style:ridge;
+    border-style:solid;
 }
-.form-mod-usuarios input:hover{
-    outline-color: var(--color-principal);
-    outline-width: 1.5px;
+.input-formularios:focus{
+    font-weight: bold;
+    background:yellow;
+}
+
+.input-formularios:hover{
+    outline-color:var(--color-principal);
     transition: 0.1s;
+    border: solid var(--color-principal);
 }
-.form-mod-usuarios select{
+.select-formularios{
     margin-top: 10px;
     border-width: 1.8px;
 }  
+.select-formularios:hover{
+    outline-color:var(--color-principal);
+    transition: 0.1s;
+    border: solid var(--color-principal);
+}
 .titulo-modulos{
   text-align: center;
 }
@@ -288,26 +308,8 @@ fieldset{
     margin-left: 5px;
 }
 
-select{
-    border-radius: 10px;
-   
-    margin-bottom: 0px;
-    height: 26px;
-    text-align: center;
-    border-style: solid;
-    border-color: black;
-    border-width: 1.5px;
-}
 
-select:hover{
-    outline-style: solid;
-    outline-color: black;
-    outline-width: 1.5px;
-    transition: 0.8s;
-}
-.option:hover{
-    color:red;
-}
+
 .botones-formulario{
     grid-column: 2/4;
 }
@@ -332,13 +334,13 @@ select:hover{
     cursor: pointer;
 }   
 .correo{
-    padding: 10px;
+ width: 250px;
 }
 .buscar{
     margin:40px;
     font-size: 20px;
 }
-
+/* Fin estilo formularios*/
 .footer-forms{
     width: 100%;
     font-weight:bolder;
@@ -350,22 +352,4 @@ select:hover{
     position: absolute;
 }
 
-@media screen and (max-width:480px){
-   
-    .opciones{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-        max-width: 50% 50% 50% 50%;
-    }
-    .caja{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-        
-    }
-     .titulo{
-         
-     }    
-}
 
