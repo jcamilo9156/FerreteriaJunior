@@ -204,11 +204,15 @@ header{
 }
 */
 /* Landing */
+.titulo-landing{
+    margin-top: 40px;
+margin-left: 100px;
+margin-bottom: 40px;
+}
 .contenedor-opciones{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows:repeat(1, 1fr);
-   border: 5px solid red;
    text-align: center;
    row-gap: 40px;
    column-gap: 10px;
@@ -232,25 +236,11 @@ margin-right: 50px;
     transition: 0.5s;
 }
 
-
-
-
-
-
 /* Media query para celulares en landing*/
-/* @media screen and (max-width:480px){
-
-    .contenedor-opciones{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-       
-    }
-    
-    .iconos-opciones:hover{
-        color: black;
-        transition: 0.5s;
-    }
+ @media screen and (max-width:480px){
+    .titulo-landing{
+        margin-top: 40px;
+    margin-left: 50px;
    
 }
 
