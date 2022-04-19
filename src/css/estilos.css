@@ -76,6 +76,8 @@ overflow-y: hidden;
     color: aliceblue;
     max-width: 100%;
     height: 100px;
+    font-weight: bold;
+    
 }
 .form-login{
     margin-top: 30px;
@@ -83,29 +85,32 @@ overflow-y: hidden;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
+    
 }
 .form-login h2{
     font-size: 30px;
     margin-top: 30px;
     margin-bottom: 20px;
    color: aliceblue;
+   font-weight: bold;
 }
 
 .input-container{
     margin-top:10px;
     height: 40px;
 }
+.input-container input{
+    border:none;
+}
+.input-container input:hover{
+    outline-color:var(--color-principal);
+    transition: 0.1s;
+    border: solid var(--color-principal);
+}
 .input-container i{
     margin-right: 5px;
 }
 
-
-.input-formularios:hover{
-    outline-style: solid;
-    outline-color: green;
-    outline-width: 1.5px;
-    transition: 0.8s;
-}
 .href-index{
     text-decoration: none;
    
@@ -115,6 +120,7 @@ overflow-y: hidden;
     border: solid 2px  #c7bb1a;
     cursor: pointer;
     font-weight: bold;
+    color: black;
 }
 .href-index:hover{
     text-decoration: none;
