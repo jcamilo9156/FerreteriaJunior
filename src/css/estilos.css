@@ -352,7 +352,8 @@ justify-content:flex-end
     }
     .botones-formulario{
         display: flex;
-        flex-direction: row;
+        justify-content: center;
+        margin:0;
     }
     }
 
