@@ -342,11 +342,24 @@ fieldset{
     margin:40px;
     font-size: 20px;
 }
+@media screen and (max-width:480px)
+{    
+    .input-formularios{
+        display: none;
+    }
+}
 /* Fin estilo formularios*/
 
 
-
-
+.categorias{
+    background-color: red;
+}
+.categorias-check{
+   margin: 20px;
+   line-height: 95px;
+   color:aliceblue;
+   background-color: #4395F6;
+}
 
 .footer-forms{
     width: 100%;
