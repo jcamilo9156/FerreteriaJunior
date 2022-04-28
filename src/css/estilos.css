@@ -344,10 +344,12 @@ fieldset{
 }
 @media screen and (max-width:480px)
 {    
-    .input-formularios{
-        display: none;
+    .forms{
+display: flex;
+flex-direction: column;
     }
-}
+    }
+
 /* Fin estilo formularios*/
 
 
