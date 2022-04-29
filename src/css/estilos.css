@@ -345,10 +345,10 @@ fieldset{
 @media screen and (max-width:480px)
 {    
     .forms{
-max-width: 200px;
+
 display: flex;
 flex-direction: column;
-justify-content:flex-end
+justify-content:center;
     }
     .botones-formulario{
         display: flex;
