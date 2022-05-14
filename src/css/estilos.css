@@ -85,7 +85,6 @@ overflow-y: hidden;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    
 }
 .form-login h2{
     font-size: 30px;
@@ -100,20 +99,20 @@ overflow-y: hidden;
     height: 40px;
 }
 .input-container input{
-    border:none;
+  border: none;
 }
 .input-container input:hover{
-    outline-color:var(--color-principal);
-    transition: 0.1s;
-    border: solid var(--color-principal);
+    border: none;
+    outline: 5px solid var(--color-principal);
+    transition: 1s;
+ 
+
 }
 .input-container i{
     margin-right: 5px;
 }
 
-.href-index{
-    text-decoration: none;
-   
+.boton-login{
     width: 110px;
     background-color: #c7bb1a;
     border-radius: 20px;
@@ -121,28 +120,6 @@ overflow-y: hidden;
     cursor: pointer;
     font-weight: bold;
     color: black;
-}
-.href-index:hover{
-    text-decoration: none;
-border-color: black;
-font-weight: bold;
-transition: 0.5s;
-font-weight:bold;
-}
-
-.boton-inicio{
-    width: 110px;
-    background-color: #c7bb1a;
-    border-radius: 20px;
-    border: solid 2px  #c7bb1a;
-    cursor: pointer;
-    font-weight: bold;
-}
-.boton-inicio:hover{
-  border-color: black;
-    font-weight: bold;
-    transition: 0.5s;
-    font-weight:bold;
 }
 
 .footer-login{
@@ -156,7 +133,17 @@ font-weight:bold;
     position: fixed;
 }
 
+.error{
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(146, 25, 25);
+    text-align: center;
+    font-weight: bold;
 
+ }
+
+
+/* Fin login */
 
 
 header{
@@ -193,7 +180,6 @@ header{
     color: black;
     font-size: 25px;
 }
-
 
 
 /*
@@ -250,6 +236,8 @@ margin-right: 50px;
    
 }
  }
+
+ 
 /* Cierre Landing /*
 
 
@@ -302,7 +290,9 @@ fieldset{
     margin: 20px;
     font-weight: bold;
 }
-
+.field-inv{
+   height: 400px;
+}
 .required{
     color: red;
     font-size: 15px;
@@ -342,20 +332,7 @@ fieldset{
     margin:40px;
     font-size: 20px;
 }
-@media screen and (max-width:480px)
-{    
-    .forms{
 
-display: flex;
-flex-direction: column;
-justify-content:center;
-    }
-    .botones-formulario{
-        display: flex;
-        justify-content: center;
-        margin:0;
-    }
-    }
 
 /* Fin estilo formularios*/
 
