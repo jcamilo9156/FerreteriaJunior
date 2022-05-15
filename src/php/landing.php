@@ -64,7 +64,7 @@ include("cerrar-conexion.php");
           }
           include("cerrar-conexion.php");
           ?>
-          <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i>
+          <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="logout.php"><i class="fa-solid fa-right-to-bracket user"title ="Cerrar Sesión"></i></a>
         </div>
     </header>
     
