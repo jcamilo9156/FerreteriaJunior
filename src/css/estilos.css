@@ -165,7 +165,7 @@ header{
     margin-right: 20px;
     
 }
-.user{
+.user {
     margin-right: 10px;
     margin-top: 15px;
     margin-left: 10px;
@@ -173,6 +173,18 @@ header{
     cursor: pointer;
     color: black;
     padding-bottom: 5px;
+}
+.logout{
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+    padding-bottom: 5px;
+}
+.logout:hover{
+    color: rgb(184, 24, 24);
 }
 .home{
     margin-top: 13px;

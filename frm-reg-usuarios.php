@@ -16,7 +16,10 @@
 <body>
     <div class="main-container">
         <header>
-            <div class="header-bienvenida"><p>Bienvenido, Usuario</p><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="landing.html"><i class="fa-solid fa-house  home" title="Ir a Inicio"></i></a>
+            <div class="header-bienvenida">
+        
+          <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="src/php/logout.php"><i class="fa-solid fa-right-to-bracket logout"title ="Cerrar Sesión"></i></a>
+
             </div>
         </header>
         <h1 class="titulo-modulos">

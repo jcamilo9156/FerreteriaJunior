@@ -22,7 +22,7 @@ include('validar-login.php');
           <?php 
             include('mensaje-bienvenida.php');
           ?>
-          <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="logout.php"><i class="fa-solid fa-right-to-bracket user"title ="Cerrar Sesión"></i></a>
+          <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>
     
@@ -32,7 +32,7 @@ include('validar-login.php');
         <div class="contenedor-opciones">
                 <div>
             
-                  <a href="../../frm-reg-usuarios.html">  <span class="material-icons-outlined iconos-opciones">groups</span></a><p>Gestionar Usuarios</p>
+                  <a href="../../frm-reg-usuarios.php">  <span class="material-icons-outlined iconos-opciones">groups</span></a><p>Gestionar Usuarios</p>
                 
                 </div>
         <div>
