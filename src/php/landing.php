@@ -17,20 +17,10 @@
 <?php
 include('validar-login.php');
 ?>
-
- 
    <header>
         <div class="header-bienvenida">
           <?php 
-             include("conexion.php");
-            $nombre = $resultado;
-          $resultado = mysqli_query( $conexion, "Select * FROM usuarios WHERE Usuario = $usuario");
-         $consulta = mysqli_fetch_array($resultado); 
-       
-          {
-        echo " <p> Bienvenid@,      "  .$consulta['Nombres'];
-          }
-          include("cerrar-conexion.php");
+            include('mensaje-bienvenida.php');
           ?>
           <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="logout.php"><i class="fa-solid fa-right-to-bracket user"title ="Cerrar Sesión"></i></a>
         </div>
