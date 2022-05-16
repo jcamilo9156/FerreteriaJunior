@@ -32,20 +32,20 @@ include('validar-login.php');
         <div class="contenedor-opciones">
                 <div>
             
-                  <a href="frm-reg-usuarios.html">  <span class="material-icons-outlined iconos-opciones">groups</span></a><p>Gestionar Usuarios</p>
+                  <a href="../../frm-reg-usuarios.html">  <span class="material-icons-outlined iconos-opciones">groups</span></a><p>Gestionar Usuarios</p>
                 
                 </div>
         <div>
-            <a href="frm-gest-clientes.html"><span class="material-icons iconos-opciones"> people</span></a><p>Gestionar Clientes</p>
+            <a href="../../frm-gest-clientes.html"><span class="material-icons iconos-opciones"> people</span></a><p>Gestionar Clientes</p>
         </div>
         <div>
-            <a href="frm-gest-inventario.html"><span class="material-icons-outlined iconos-opciones"> inventory</span></a><p>Gestionar Inventario</p>
+            <a href="../../frm-gest-inventario.html"><span class="material-icons-outlined iconos-opciones"> inventory</span></a><p>Gestionar Inventario</p>
         </div>
         <div>
             <a href="index.html"><span class="material-icons-outlined iconos-opciones">point_of_sale</span></a> <p>Módulo de Ventas</p>
         </div>
         <div class="ultima">
-            <a href="frm-gest-proveedores.html"><span class="material-icons iconos-opciones"> person_search</span></a><p>Gestionar Proveedores</p>
+            <a href="../../frm-gest-proveedores.html"><span class="material-icons iconos-opciones"> person_search</span></a><p>Gestionar Proveedores</p>
         </div>
     </div>
         </div>
