@@ -3,6 +3,8 @@ $user = $_POST ['userid'];
 $passwordactual = $_POST ['passactual'];
 $password1 = $_POST['password1'];
 $password2 = $_POST['password2'];
+if (isset($_POST['actualizar-pass'])) {
+    # code...
 
 if ($password1 <> $password2) {
     echo "Ambos Campos Deben Coincidir <br>";
@@ -36,6 +38,6 @@ if (preg_match('`^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10}$`',$password1)){
           * Debe contener al menos un número <br>";
  }
 
-
+}
 
 ?>
