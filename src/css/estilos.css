@@ -369,3 +369,9 @@ fieldset{
     background-color: black;
     position: absolute;
 }
+.form-cambio-password{
+    text-align: center;
+    
+ 
+    background-color: red;
+}
