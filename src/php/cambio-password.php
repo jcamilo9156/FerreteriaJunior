@@ -1,6 +1,6 @@
 <?php
 $user = $_POST ['userid'];
-$passwordactual = $_POST ['passactual']
+$passwordactual = $_POST ['passactual'];
 $password1 = $_POST['password1'];
 $password2 = $_POST['password2'];
 
