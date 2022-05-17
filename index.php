@@ -23,10 +23,10 @@
             <i class="fa-solid fa-user"></i> <input maxlength="10" minlength="6" type="text" name="usuario" placeholder="Digita el usuario" autofocus title="El usuario es el número de identificación"  ><!--<span class="required" title="Dato Obligatorio">*</span>-->
          </div>  
          <div class="input-container">
-          <i class="fa-solid fa-key"></i> <input maxlength="10" type="password" name="password" placeholder="Digita la contraseña" pattern="[a-z A-Z 0-9]{6,10}"title="Recuerda que la contraseña es de máximo 10 dígitos y fue asignada en el momento del registro por el Administrador, puedes cambiarla en el menú de usuario teniendo en cuenta las siguientes recomendaciones:
-          * Máximo y Mínimo 10 dígitos
-          * Debe contener una Mayúscula
-          * Debe contener al menos un número y un carácter especial ej: *-+. " >
+          <i class="fa-solid fa-key"></i> <input maxlength="10" type="password" name="password" placeholder="Digita la contraseña" title="Recuerda que la contraseña debe ser de 10 dígitos y fue asignada en el momento del registro por el Administrador, puedes cambiarla en el menú de usuario teniendo en cuenta las siguientes recomendaciones:
+          * 10 dígitos
+          * Debe contener al menos una Mayúscula
+          * Debe contener al menos un número ">
         </div>
         <button type="submit" class="boton-login" name="boton_login"> Iniciar Sesión </button>
         <div class="error">
