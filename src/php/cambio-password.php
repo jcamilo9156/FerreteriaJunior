@@ -8,7 +8,18 @@ if ($password1 <> $password2) {
     echo "Ambos Campos Deben Coincidir <br>";
     return false;
 }
+//Validamos que los campos  no estén vacios
 
+if ($passwordactual =="" && $password1=="" && $password2=="")
+{
+    echo "No has ingresado ningún dato";
+return false;    
+}
+if ($passwordactual = $password1)
+{
+    echo "La contraseña actual y la nueva contraseña no pueden ser iguales";
+return false;    
+}
     //Validamos que la contraseña coincida con el patrón
 
 if (preg_match('`^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10}$`',$password1)){
@@ -24,7 +35,7 @@ if (preg_match('`^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10}$`',$password1)){
           * Debe contener al menos una Mayúscula <br>
           * Debe contener al menos un número <br>";
  }
-// pendiente validación de contraseña actual
+
 
 
 ?>

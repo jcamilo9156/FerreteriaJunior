@@ -19,15 +19,21 @@
 <label for="user">Usuario</label>
 <input type="text" readonly class="input-formularios" name="userid" id="user" placeholder="1121880528">
 <label for="passactual">Digitar Contraseña Actual<span class="required">*</span></label>
-<input type="password"  class="input-formularios" name="passactual" id="passactual">
+<input type="password"  maxlenght ="10" class="input-formularios" name="passactual" id="passactual">
 <label for="password1">Digitar Contraseña<span class="required">*</span></label>
-<input type="password"  class="input-formularios" name="password1" id="password1">
+<input type="password"  maxlength ="10" class="input-formularios" name="password1" id="password1">
 <label for="password2">Confirmar Contraseña<span class="required">*</span></label>
-<input type="text"  class="input-formularios" name="password2" id="password2" >
+<input type="password" maxlength="10"  class="input-formularios" name="password2" id="password2" >
 <button type="submit" value="Guardar">Guardar</button>
 </form>
 </div>
-
+</div>
+<div class="error">
+    <span>
+        <?php
+        include('src/php/cambio-password.php');
+        ?>
+    </span>
 
 
 
