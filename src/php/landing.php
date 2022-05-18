@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
-    <link rel="preload" href="src/css/estilos.css" as="style">
+    <link rel="preload" href="../css/estilos.css" as="style">
     <link href="../css/estilos.css" rel="stylesheet" type="text/css">
   
 </head>
@@ -22,7 +23,7 @@ include('validar-login.php');
           <?php 
             include('mensaje-bienvenida.php');
           ?>
-          <a href="../../opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
+          <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>
     
