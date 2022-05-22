@@ -33,7 +33,7 @@
 </div>
 <div>
     <label for="password">Clave:</label><span class="required">*</span><br>
-    <input type="passwor" name="password" id="password" placeholder="Sena1234*-"  class="input-formularios" maxlength="10" required>
+    <input type="password" name="password" id="password" placeholder="Sena1234*-"  class="input-formularios" maxlength="10" required>
 </div>
 <div class="campo-form">
     <label for="">Cargo a asignar</label><span class="required">*</span></p>
