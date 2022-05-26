@@ -29,7 +29,7 @@
           * Debe contener al menos un número ">
         </div>
         <button type="submit" class="boton-login" name="boton_login"> Iniciar Sesión </button>
-        <div class="error">
+        <div class="avisos">
       <span>
             <?php
             

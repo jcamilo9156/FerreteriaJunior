@@ -1,5 +1,6 @@
 <?php
 //Declaro Variables
+if(isset($_POST['guardar-usuario'])){
  $usuario = $_POST ["user"];
  $pass = $_POST ["password"];
  $nombres = $_POST ['nombres'];
@@ -19,11 +20,11 @@
       // Ejecuto la consulta
 $resultado = mysqli_query($conexion, $insertar);
       if (!$resultado){
-        echo "error al registrar datos";
+        echo "Ocurrió un error al registrar los datos o el usuario ya existe";
       } else {
         echo "Usuario Registrado";
       }
       // Cierro conexión a bd
       include("cerrar-conexion.php");
-
+    }
   ?>

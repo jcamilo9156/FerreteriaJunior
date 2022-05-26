@@ -15,8 +15,9 @@ $_SESSION ['sesion_exitoso'] =0;
  }
 
   else {
-      include("conexion.php");
     $_SESSION['sesion_exitoso']=3; // Error inicio sesión datos incorrectos
+      include("conexion.php");
+   
       $resultado = mysqli_query( $conexion, "Select * FROM usuarios Where Usuario = '$usuario' and Clave = '$pass'");
       while ($consulta = mysqli_fetch_array($resultado)) 
       {

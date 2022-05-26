@@ -26,7 +26,7 @@
             Gestión de Usuarios
         </h1>   
         <fieldset><legend>Formulario Registro Usuarios</legend>
-<form action="src/php/registrar-usuarios.php" class="forms" method="post">
+<form action="frm-reg-usuarios.php" class="forms" method="post">
     <div>
     <label for="user">Usuario</label><span class="required">*</span><br>
     <input type="text" name="user" id="user" placeholder="1140125320" class="input-formularios" autofocus maxlength="10">
@@ -118,6 +118,13 @@
 </form>
 </fieldset>
     </div>
+</div>
+<div class="avisos">
+    <span>
+    <?php
+include('src/php/registrar-usuarios.php');
+    ?>
+    </span>
 </div>
     <h2 class="titulo-modulos">Actualización de Información de Usuarios</h2>
 </div>
