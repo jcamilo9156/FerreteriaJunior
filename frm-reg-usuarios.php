@@ -137,8 +137,8 @@ include('src/php/registrar-usuarios.php');
 </div>
 <div class="tablas">
     <table>
+        <tr>
         <th>Id</th>
-        
         <th>Cargo</th>
         <th>Nombres</th>
         <th>Apellidos</th>
@@ -148,6 +148,21 @@ include('src/php/registrar-usuarios.php');
         <th>Teléfono</th>
         <th>Correo</th>
         <th>Acción</th>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>Administrador</td>
+        <td>Juan Camilo</td>
+        <td>Quezada Barreto</td>
+        <td>1121880528</td>
+        <td>Cra 13 a #38-20</td>
+        <td>Villavicencio</td>
+        <td>3005958121</td>
+        <td>jcamilo9156@hotmail.com</td>
+        <td><input type="submit"value="Borrar" class="botones-tablas-borrar">
+            <input type="submit"value="Editar" class="botones-tablas-editar"></td>
+    </tr>
+    
     </table>
 </div>
 
