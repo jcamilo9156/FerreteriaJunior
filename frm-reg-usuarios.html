@@ -130,10 +130,25 @@ include('src/php/registrar-usuarios.php');
 <div class="caja-busqueda">
     <form action="" method="post">
     <b>Digite el número de identificación del usuario</b>
-    <input type="text" name="id-busqueda" class="input-formularios">
-    <input type="submit" value="Consultar" class="botones-busqueda">
-    <input type="submit" value="Consultar todos" class="botones-busqueda">
+    <input type="text" name="id-busqueda" class="input-formularios" maxlength="10">
+    <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-usuarios">
+    <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-users">
 </form>
+</div>
+<div class="tablas">
+    <table>
+        <th>Id</th>
+        
+        <th>Cargo</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Identificación</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+        <th>Acción</th>
+    </table>
 </div>
 
     

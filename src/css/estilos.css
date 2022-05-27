@@ -389,9 +389,15 @@ border: #4395F6;
     margin-top: 20px;
     text-align: center;
 }
+table{
+    text-align: center;
+}
 .tablas{
-    max-width: 100%;
+    border: red solid 2px;
+ 
+    width: 100%;
 }
 td,th{
     width: 10%;
 }
+
