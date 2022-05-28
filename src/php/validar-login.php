@@ -29,6 +29,7 @@ include("cerrar-conexion.php");
 
   if ($_SESSION ['sesion_exitoso']<>1)
    {
+     echo "No inicia sesión";
       header('location:../../index.php');
    
   }

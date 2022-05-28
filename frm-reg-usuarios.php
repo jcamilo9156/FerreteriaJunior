@@ -128,7 +128,7 @@ include('src/php/registrar-usuarios.php');
 </div>
     <h2 class="titulo-modulos">Búsqueda de Usuarios</h2>
 <div class="caja-busqueda">
-    <form action="" method="post">
+    <form action="src/php/borrar-usuario.php" method="post">
     <b>Digite el número de identificación del usuario</b>
     <input type="text" name="id-busqueda" class="input-formularios" maxlength="10">
     <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-usuarios">
@@ -159,8 +159,12 @@ include('src/php/registrar-usuarios.php');
         <td>Villavicencio</td>
         <td>3005958121</td>
         <td>jcamilo9156@hotmail.com</td>
-        <td><input type="submit"value="Borrar" class="botones-tablas-borrar">
-            <input type="submit"value="Editar" class="botones-tablas-editar"></td>
+        <td>
+            <form action="" method="POST">
+            <input type="submit"value="Borrar" class="botones-tablas-borrar" name="borrar-usuario">
+            <input type="submit"value="Editar" class="botones-tablas-editar">
+        </td>
+        </form>
     </tr>
     
     </table>

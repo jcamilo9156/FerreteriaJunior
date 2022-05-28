@@ -120,6 +120,8 @@ overflow-y: hidden;
     cursor: pointer;
     font-weight: bold;
     color: black;
+    margin-left: 20px;
+
 }
 
 .footer-login{
