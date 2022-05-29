@@ -17,6 +17,13 @@ $_SESSION ['sesion_exitoso'] =0;
  <div class='avisos'>
  <p>Los campos son obligatorios</p>";
  return false;
+  }
+ if (!preg_match('`^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10}$`',$pass)){
+  echo "
+  <div class='avisos'>
+  <p>Contraseña no coincide con la política de seguridad</p>
+  </div>";
+  return false;
  }
   else {
       include("conexion.php");
