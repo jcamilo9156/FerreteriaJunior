@@ -21,8 +21,7 @@ if (isset($_POST['actualizar-pass'])){
 // Ambos campos de la nueva contraseña deben coincidir
 
 if ($password1 <>$password2) {
-    header('location: opc-usuarios.php');
-    echo "Los Campos De La Contraseña Nueva Deben Coincidir <br>";
+    echo "Los Campos De La Contraseña Nueva Deben Coincidir";
     return false;
 }
 //Validamos que los campos  no estén vacios
@@ -59,9 +58,9 @@ if (preg_match('`^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10}$`',$password1)){
  } else {
   
      echo "La nueva contraseña no cumple con las política de seguridad: <br>
-          * 10 dígitos <br>
-          * Debe contener al menos una Mayúscula <br>
-          * Debe contener al menos un número <br>";
+         <span class='required'> *</span> Debe contener 10 dígitos <br>
+         <span class='required'> *</span> Debe contener al menos una Mayúscula <br>
+         <span class='required'> *</span> Debe contener al menos un número <br>";
  }
 
 //

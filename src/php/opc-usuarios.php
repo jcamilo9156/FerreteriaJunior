@@ -26,18 +26,20 @@
     <form action="opc-usuarios.php" method="post">
 <label for="user">Usuario </label>
 
-<input type="text"  class="input-formularios usuario" name="userid" id="user" disabled><br>
+<input type="text"  class="input-formularios usuario" name="userid" id="user"><br>
 <label for="passactual">Digitar Contraseña Actual<span class="required">*</span></label>
 <input type="password"  maxlength ="10" class="input-formularios" name="passactual" id="passactual"><br>
 <label for="password1">Digitar Nueva Contraseña<span class="required">*</span></label>
 <input type="password"  maxlength ="10" class="input-formularios" name="password1" id="password1"><br>
 <label for="password2">Confirmar Contraseña<span class="required">*</span></label>
 <input type="password" maxlength="10"  class="input-formularios confirmar" name="password2" id="password2" ><br>
-
+<div class="avisos">
 <?php  
-require('cambio-password.php');
-?>
 
+require('cambio-password.php');
+
+?>
+</div>
 <input type="submit" value="Guardar" name="actualizar-pass" class="save-pass-change">
 </form>
 
