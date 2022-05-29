@@ -7,11 +7,16 @@ $_SESSION ['sesion_exitoso'] =0;
 
  $usuario = $_POST ['usuario'];
  $pass = $_POST ['password'];
+ 
+// Validamos campos vacios
 
  if ($usuario =="" || $pass=="") 
   {
-    
  $_SESSION['sesion_exitoso']=2; // 2 es error de campos vacios
+ echo "
+ <div class='avisos'>
+ <p>Los campos son obligatorios</p>";
+ return false;
  }
 
   else {
@@ -29,7 +34,10 @@ include("cerrar-conexion.php");
 
   if ($_SESSION ['sesion_exitoso']<>1)
    {
-     echo "No inicia sesión";
+    echo "
+    <div class='avisos'>
+    <p>Los campos son obligatorios</p>";
+    return false;
       header('location:../../index.php');
    
   }

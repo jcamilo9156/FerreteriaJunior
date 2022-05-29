@@ -16,7 +16,7 @@
     <div class="titulo-login"><h1>Sistema Gestión Ventas e Inventario <br>Ferretería Junior</h1>
     </div>
     
-    <form action="src/php/validar-login.php" method="post">
+    <form action="index.php" method="post">
     <div class="form-login">    
         <h2>Iniciar Sesión</h2> 
     <div class="input-container">
@@ -31,7 +31,7 @@
         <button type="submit" class="boton-login" name="boton_login"> Iniciar Sesión </button>
             <?php
             
-          include('src/php/errores.php');
+            include('src/php/validar-login.php');
             
             ?>
               
