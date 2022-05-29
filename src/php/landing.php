@@ -15,13 +15,13 @@
   
 </head>
 <body>
-<?php
-include('validar-login.php');
-?>
+
    <header>
-        <div class="header-bienvenida">
-          <?php 
-            include('mensaje-bienvenida.php');
+   <div class="header-bienvenida">
+   <?php 
+   ob_start();
+            include('validar-login.php');
+            echo "$usuario =['usuario']";
           ?>
           <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>

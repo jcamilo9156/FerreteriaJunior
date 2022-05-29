@@ -18,28 +18,27 @@ $_SESSION ['sesion_exitoso'] =0;
  <p>Los campos son obligatorios</p>";
  return false;
  }
-
   else {
-    $_SESSION['sesion_exitoso']=3; // Error inicio sesión datos incorrectos
       include("conexion.php");
-   
+      $_SESSION['sesion_exitoso']=3; // Incorrectos
       $resultado = mysqli_query( $conexion, "Select * FROM usuarios Where Usuario = '$usuario' and Clave = '$pass'");
       while ($consulta = mysqli_fetch_array($resultado)) 
       {
 $_SESSION ['sesion_exitoso']=1; //Inicio sesión correcto
+header('location:src/php/landing.php');
 include("cerrar-conexion.php");
       }
   }
-
 
   if ($_SESSION ['sesion_exitoso']<>1)
    {
     echo "
     <div class='avisos'>
-    <p>Los campos son obligatorios</p>";
+    <p>Datos Incorrectos</p>";
     return false;
-      header('location:../../index.php');
+   
    
   }
 }
+
   ?>
