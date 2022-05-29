@@ -20,7 +20,7 @@ $_SESSION ['sesion_exitoso'] =0;
  }
   else {
       include("conexion.php");
-      $_SESSION['sesion_exitoso']=3; // Incorrectos
+      $_SESSION['sesion_exitoso']=3; // Datos Incorrectos
       $resultado = mysqli_query( $conexion, "Select * FROM usuarios Where Usuario = '$usuario' and Clave = '$pass'");
       while ($consulta = mysqli_fetch_array($resultado)) 
       {
@@ -30,7 +30,7 @@ include("cerrar-conexion.php");
       }
   }
 
-  if ($_SESSION ['sesion_exitoso']<>1)
+  if ($_SESSION ['sesion_exitoso']<>1) 
    {
     echo "
     <div class='avisos'>

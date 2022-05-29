@@ -1,5 +1,5 @@
 <?php
-
+include("validar-login.php");
 include("conexion.php");
             $nombre = $resultado;
           $resultado = mysqli_query( $conexion, "Select * FROM usuarios WHERE Usuario = $usuario");
