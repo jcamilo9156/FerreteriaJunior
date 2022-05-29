@@ -376,7 +376,7 @@ fieldset{
     margin-top: 60px;
     display: flex;
   justify-content: center;
- border: solid 1px green;
+ 
  height: 200px;
     width: 50%;
     margin-left: 400px;
@@ -415,6 +415,14 @@ border: #4395F6;
     margin-top: 20px;
     text-align: center;
 }
+
+.mensaje-obligatorios{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* tablas */
+
 table{
     text-align: center;
 }

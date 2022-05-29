@@ -3,7 +3,10 @@ include ('validar-login.php');
 if (isset($_POST['boton_login'])){
             if ( $_SESSION ['sesion_exitoso']==2)
              {
-           echo "Los campos son obligatorios";
+           echo "
+           <div class='avisos'>
+           <p>Los campos son obligatorios</p>;
+           </div>";
            return false;
             }
          

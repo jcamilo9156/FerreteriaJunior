@@ -1,5 +1,5 @@
 <?php
-
+if (isset($_POST['actualizar-pass'])){
 @$user = $_POST ['userid'];
 @$passwordactual = $_POST ['passactual'];
 @$password1 = $_POST['password1'];
@@ -29,16 +29,22 @@ if ($password1 <>$password2) {
 
 if ($passwordactual =="" && $password1=="" && $password2=="")
 {
- 
-    echo "No has ingresado ningún dato";
+ echo "
+ <span>
+ <p class='mensaje-obligatorios'>Los campos con<span class='required'>*</span>  son obligatorios</p>
+         </span>
+";
 return false;    
 }
 // Validamos que la contraseña actual no sea la misma que la contraseña nueva
 
 if ($passwordactual == $password1)
 {  
- 
-    echo "La contraseña actual y la nueva contraseña no pueden ser iguales";
+    echo "
+    <span>
+    <p class='mensaje-obligatorios'>La contraseña actual y la nueva contraseña no pueden ser iguales</p>
+            </span>
+   ";
 return false;    
 }
     //Validamos que la contraseña coincida con el patrón
@@ -59,5 +65,5 @@ if (preg_match('`^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10}$`',$password1)){
  }
 
 //
-
+}
 ?>
