@@ -373,13 +373,36 @@ fieldset{
     position: absolute;
 }
 .form-cambio-password{
-    text-align: center;
-    
- 
+    margin-top: 60px;
+    display: flex;
+  justify-content: center;
+ border: solid 1px green;
+ height: 200px;
+    width: 50%;
+    margin-left: 400px;
+    border-radius: 10px;
+}
+.inputs-frm-cambio-pass{
     background-color: red;
 }
-
-
+.usuario{
+margin-left: 135px;
+}
+.confirmar{
+    margin-left: 25px;
+}
+.save-pass-change{
+    background-color: #c7bb1a;
+    font-weight: bold;
+    width: 60px;
+    margin: 20px 140px;
+    cursor: pointer;
+}
+.save-pass-change:hover{
+ 
+    border: #4395F6 solid 3px;
+    
+}
 .botones-busqueda{
     width: 120px;
     background-color: var(--color-principal);
