@@ -18,6 +18,8 @@ $_SESSION ['sesion_exitoso'] =0;
  <p>Los campos son obligatorios</p>";
  return false;
   }
+  // Validamos cumplimiento de politicas contraseñas
+  
  if (!preg_match('`^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{10}$`',$pass)){
   echo "
   <div class='avisos'>

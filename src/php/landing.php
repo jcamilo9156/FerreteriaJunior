@@ -35,7 +35,7 @@ include('fecha-actual.php');
                 
                 </div>
         <div>
-            <a href="../../frm-gest-clientes.html"><span class="material-icons iconos-opciones"> people</span></a><p>Gestionar Clientes</p>
+            <a href="../../frm-gest-clientes.php"><span class="material-icons iconos-opciones"> people</span></a><p>Gestionar Clientes</p>
         </div>
         <div>
             <a href="../../frm-gest-inventario.html"><span class="material-icons-outlined iconos-opciones"> inventory</span></a><p>Gestionar Inventario</p>
