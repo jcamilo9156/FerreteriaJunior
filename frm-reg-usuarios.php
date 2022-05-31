@@ -135,6 +135,7 @@ include('src/php/registrar-usuarios.php');
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-users">
 </form>
 </div>
+<!--
 <div class="tablas">
     <table>
         <tr>
@@ -169,7 +170,7 @@ include('src/php/registrar-usuarios.php');
     
     </table>
 </div>
-
+-->
     
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>

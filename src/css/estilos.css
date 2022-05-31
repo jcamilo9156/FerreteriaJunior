@@ -425,6 +425,7 @@ border: #4395F6;
 
 table{
     text-align: center;
+    border: #b2b2b2 1px solid;
 }
 .tablas{
     margin-top: 15px;
@@ -434,7 +435,7 @@ table{
 }
 td,th{
    
-    width: 10%;
+    width: 5%;
 }
 th{
     background-color: #c7bb1a;
