@@ -135,7 +135,7 @@ include('src/php/registrar-usuarios.php');
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-users">
 </form>
 </div>
-<!--
+
 <div class="tablas">
     <table>
         <tr>

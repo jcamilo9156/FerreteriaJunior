@@ -16,7 +16,11 @@
 <body>
     <div class="main-container">
         <header>
-            <div class="header-bienvenida"><p>Bienvenido, Usuario</p><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="landing.html"><i class="fa-solid fa-house  home" title="Ir a Inicio"></i></a>
+            <div class="header-bienvenida">
+            <?PHP
+include('src/php/fecha-actual.php');
+                ?>
+                <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="src/php/landing.php"><i class="fa-solid fa-house  home" title="Ir a Inicio"></i></a><a href="src/php/logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
             </div>
         </header>
         <h1 class="titulo-modulos">
@@ -27,11 +31,11 @@
  
 <div>
     <label for="name">Nombre Producto</label><span class="required">*</span><br>
-    <input type="text" name="" id="name" placeholder="Cemento Argos x 50 kg" class="input-formularios" autofocus>
+    <input type="text" name="nombre-producto" id="name" placeholder="Cemento Argos x 50 kg" class="input-formularios" autofocus>
 </div>
 <div>
     <label for="proveedor">Proveedor</label><span class="required">*</span><br>
-    <select name="" id="proveedor" class="select-formularios">
+    <select name="proveedor" id="proveedor" class="select-formularios">
         <option value="argos">Cementera Argos S.A</option>
         <option value="argos">Cementera CEMEX S.A</option>
         <option value="argos">CORONA S.A</option>
@@ -40,23 +44,23 @@
 </div>
 <div>
     <label for="Cantidad">Cantidad</label><span class="required">*</span><br>
-    <input type="number" name="" class="input-formularios" required id="Cantidad">
+    <input type="number" name="cantidad" class="input-formularios" required id="Cantidad">
 </div>
 <div>
     <label for="date">Fecha de Ingreso</label><br>
-    <input type="date" name="" id="date" placeholder="" class="input-formularios">
+    <input type="date" name="fecha-ingreso" id="date" class="input-formularios date">
 </div>
 <div>
     <label for="Ubicación">Ubicación</label><span class="required">*</span><br>
-    <select class="select-formularios">
+    <select class="select-formularios" name="ubicacion">
         <option value="bod1"> Bodega 1</option>
         <option value="bod1"> Bodega 2</option>
     </select>
-    <input type="text" class="input-formularios">
+    <input type="text" class="input-formularios" name="ubicacion">
 </div>
 <div>
     <label for="categoria">Categoría Producto</label><br>
-    <select name="" id="" class="select-formularios">
+    <select name="categoria-producto" id="" class="select-formularios">
         <option value="constr">Construcción</option>
         <option value="Pinturas">Pinturas</option>
         <option value="Electricos">Eléctricos</option>
@@ -64,16 +68,20 @@
     </select>
 </div>
 <div>
-    <label for="e-mail">Precio</label><span class="required">*</span><br>
-    <input type="text" id="e-mail" placeholder="" class="input-formularios" required>
+    <label for="precio">Precio Venta</label><span class="required">*</span><br>
+    <input type="text" name="precio" id="precio" placeholder="" class="input-formularios" required>
 </div>
 <div>
-    <label for="">Observaciones</label><br>
-    <textarea name="" id="" cols="30" rows="3"></textarea>
+    <label for="precio">Precio Día Alquiler</label><br>
+    <input type="text" name="precio" id="precio" placeholder="" class="input-formularios" required>
 </div>
-<div class="botones-formulario">
+<div>
+    <label for="observ">Observaciones</label><br>
+    <textarea name="observaciones" id="observ" cols="30" rows="3"></textarea>
+</div>
+<div class="botones-formulario inventario">
 <button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>
-<button class="boton-formulario" type="submit"><i class="fa-solid fa-floppy-disk iconos-formularios guardar" title="Guardar los datos"> </i></button>
+<button class="boton-formulario" type="submit" name="guardar-producto"><i class="fa-solid fa-floppy-disk iconos-formularios guardar" title="Guardar los datos"> </i></button>
 </div>
 </form>
 </fieldset>
