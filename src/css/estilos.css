@@ -349,6 +349,7 @@ fieldset{
     cursor: pointer;
 }   
 .correo{
+    padding: 2px;
  width: 250px;
 }
 .buscar{

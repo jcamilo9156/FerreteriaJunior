@@ -27,7 +27,7 @@ include('src/php/fecha-actual.php');
             Gestión de Inventario
         </h1>   
         <fieldset class="field-inv"><legend>Formulario Registro Productos</legend>
-<form action="" class="forms">
+<form action="frm-gest-inventario.php" class="forms" method="POST">
  
 <div>
     <label for="name">Nombre Producto</label><span class="required">*</span><br>
@@ -43,7 +43,7 @@ include('src/php/fecha-actual.php');
     </select>
 </div>
 <div>
-    <label for="Cantidad">Cantidad</label><span class="required">*</span><br>
+    <label for="Cantidad">Cantidad a Ingresar</label><span class="required">*</span><br>
     <input type="number" name="cantidad" class="input-formularios" required id="Cantidad">
 </div>
 <div>
@@ -69,11 +69,11 @@ include('src/php/fecha-actual.php');
 </div>
 <div>
     <label for="precio">Precio Venta</label><span class="required">*</span><br>
-    <input type="text" name="precio" id="precio" placeholder="" class="input-formularios" required>
+    <input type="text" name="precio-venta" id="precio" placeholder="" class="input-formularios" required>
 </div>
 <div>
     <label for="precio">Precio Día Alquiler</label><br>
-    <input type="text" name="precio" id="precio" placeholder="" class="input-formularios" required>
+    <input type="text" name="precio-alquiler" id="precio" placeholder="" class="input-formularios" required>
 </div>
 <div>
     <label for="observ">Observaciones</label><br>
@@ -86,7 +86,9 @@ include('src/php/fecha-actual.php');
 </form>
 </fieldset>
     </div>
-        
+       <?php
+       include('src/php/gestion-inventario.php');
+       ?> 
    </form>
      </fieldset>
          </div>
