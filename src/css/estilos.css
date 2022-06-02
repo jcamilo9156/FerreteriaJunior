@@ -312,6 +312,9 @@ fieldset{
     margin: 20px;
     font-weight: bold;
 }
+.form-proveedores{
+    height: 300px;
+}
 .field-inv{
    height: 400px;
 }
@@ -419,6 +422,9 @@ margin-left: 135px;
     cursor: pointer;
     font-weight: bold;
 border: #4395F6;
+}
+.proveedor{
+    margin-left: 10px;
 }
 .caja-busqueda{
     margin-top: 20px;

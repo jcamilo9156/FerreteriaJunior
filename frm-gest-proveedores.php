@@ -26,7 +26,7 @@ include('src/php/fecha-actual.php');
         <h1 class="titulo-modulos">
             Gestión de Proveedores
         </h1>   
-        <fieldset><legend>Formulario Registro Proveedores</legend>
+        <fieldset class="form-proveedores"><legend>Formulario Registro Proveedores</legend>
 <form action="frm-gest-proveedores.php" class="forms" method="post">
  
 <div>
@@ -87,6 +87,18 @@ include('src/php/fecha-actual.php');
     <label for="e-mail">Correo</label><span class="required">*</span><br>
     <input type="email" id="e-mail" name="Correo"  placeholder="jcquezada@misena.edu.co" class="input-formularios correo" required>
 </div>
+<div>
+    <b>Categoría</b><br>
+    <select class="select-formularios" name="">
+        <?php
+        include ('src/php/categorias.php');
+        ?>
+                   
+                   
+                  
+</select>
+
+</div>
 <div class="botones-formulario">
 <button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>
 <button class="boton-formulario" type="submit" name="guardar-proveedor"><i class="fa-solid fa-floppy-disk iconos-formularios guardar" title="Guardar los datos"> </i></button>
@@ -97,6 +109,19 @@ include('src/php/proveedores.php');
         ?>
 </form>
 </fieldset>
+<h2 class="titulo-modulos">Búsqueda de Proveedores</h2>
+<div class="caja-busqueda">
+    <form action="frm-gest-clientes.php" method="post">
+    <b>Buscar por categoría</b>
+    <select class="select-formularios" name="id-client-search">
+    <?php
+        include ('src/php/categorias.php');
+        ?>
+</select>
+    <input type="submit" value="Consultar" class="botones-busqueda proveedor" name="consulta-proveedor">
+    <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-proveedores">
+</form>
+</div>
 
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
