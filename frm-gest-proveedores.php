@@ -89,7 +89,7 @@ include('src/php/fecha-actual.php');
 </div>
 <div>
     <b>Categoría</b><br>
-    <select class="select-formularios" name="">
+    <select class="select-formularios" name="categoria-proveedor">
         <?php
         include ('src/php/categorias.php');
         ?>
@@ -111,9 +111,9 @@ include('src/php/proveedores.php');
 </fieldset>
 <h2 class="titulo-modulos">Búsqueda de Proveedores</h2>
 <div class="caja-busqueda">
-    <form action="frm-gest-clientes.php" method="post">
+    <form action="frm-gest-proveedores.php" method="post">
     <b>Buscar por categoría</b>
-    <select class="select-formularios" name="id-client-search">
+    <select class="select-formularios" name="id-proveedor-busqueda">
     <?php
         include ('src/php/categorias.php');
         ?>

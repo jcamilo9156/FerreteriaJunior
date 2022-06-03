@@ -10,10 +10,10 @@ if(isset($_POST['guardar-cliente'])){
     $ciudad =($_POST['Ciudad']);
     $telefono =($_POST['Telefono']);
     $correo =($_POST['E-mail']);
-    $tipo_cliente =($_POST['Tipo_Cliente']);
+   $tipo_cliente =($_POST['tipo']); //no me está tomando el cambio en la bd
 
 include('src/php/conexion.php');
-$insertar = "INSERT INTO clientes (Nombres, Apellidos,Razon_Social, Tipo_identificacion, Identificacion, Direccion, Barrio, Ciudad, Telefono, Correo, Tipo_Cliente)
+$insertar = "INSERT INTO clientes (Nombres, Apellidos,Razon_Social, Tipo_identificacion, Identificacion, Direccion, Barrio, Ciudad, Telefono, Correo, Tipo_cliente)
 VALUES ('$nombres_cliente ', '$apellidos_cliente', '$razon_social', '$tipo_id', '$id', '$direccion', '$barrio', '$ciudad', '$telefono', '$correo', '$tipo_cliente')";
  // Ejecuto la consulta
 @$resultado = mysqli_query($conexion, $insertar); // Coloco arroba antes de variable para que no muestre mensaje warning y muestre el echo cuando sea duplicado

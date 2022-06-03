@@ -28,7 +28,7 @@ while ($consulta = mysqli_fetch_array($resultados)){
 
     echo "</tr>";
     echo "<tr>";
-        echo "<td>001</td>";
+        echo "<td>"; echo $consulta['Id_cliente']; echo "</td>";
        echo "<td>"; echo $consulta['Nombres']; echo "</td>";
         echo "<td>";  echo $consulta['Apellidos']; echo "</td>";
        echo  "<td>"; echo $consulta['Razon_Social']; echo "</td>";

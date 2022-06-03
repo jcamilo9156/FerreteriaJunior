@@ -105,10 +105,12 @@ include('src/php/fecha-actual.php');
     <input type="tel" name="Telefono" id="tel" placeholder="3005958121" class="input-formularios">
 </div>
 <div>
-    <label for="id">Tipo Cliente</label><span class="required">*</span><br>
-    <select class="select-formularios" name="Tipo_Cliente">
-        <option value="Cedula">Persona Natural</option>
-        <option value="Cedula">Empresa</option>
+    <label for="">Tipo Cliente</label><span class="required">*</span><br>
+    <select class="select-formularios" name="tipo">
+<?php
+// Incluyo archivo para lista de tipocliente
+include('src/php/tipo-cliente.php');
+?>
     </select>
     </div>
 <div>
