@@ -111,17 +111,22 @@ include('src/php/proveedores.php');
 </fieldset>
 <h2 class="titulo-modulos">Búsqueda de Proveedores</h2>
 <div class="caja-busqueda">
-    <form action="frm-gest-proveedores.php" method="post">
+    <form action="" method="post">
     <b>Buscar por categoría</b>
     <select class="select-formularios" name="id-proveedor-busqueda">
     <?php
         include ('src/php/categorias.php');
         ?>
 </select>
+
     <input type="submit" value="Consultar" class="botones-busqueda proveedor" name="consulta-proveedor">
-    <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-proveedores">
+  
+  <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-proveedores">
 </form>
 </div>
+<?php
+include('src/php/buscar-proveedores.php');
+?>
 
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
