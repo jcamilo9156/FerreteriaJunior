@@ -36,10 +36,10 @@ include('src/php/fecha-actual.php');
 <div>
     <label for="proveedor">Proveedor</label><span class="required">*</span><br>
     <select name="proveedor" id="proveedor" class="select-formularios">
-        <option value="argos">Cementera Argos S.A</option>
-        <option value="argos">Cementera CEMEX S.A</option>
-        <option value="argos">CORONA S.A</option>
-        <option value="argos">PINTUCO  S.A</option>
+        <?php 
+    include ('src/php/lista-proveedores.php');
+        ?>
+    
     </select>
 </div>
 <div>
@@ -53,18 +53,16 @@ include('src/php/fecha-actual.php');
 <div>
     <label for="Ubicación">Ubicación</label><span class="required">*</span><br>
     <select class="select-formularios" name="ubicacion">
-        <option value="bod1"> Bodega 1</option>
-        <option value="bod1"> Bodega 2</option>
+        <option value="1"> Bodega 1</option>
+        <option value="2"> Bodega 2</option>
     </select>
-    <input type="text" class="input-formularios" name="ubicacion">
 </div>
 <div>
     <label for="categoria">Categoría Producto</label><br>
     <select name="categoria-producto" id="" class="select-formularios">
-        <option value="constr">Construcción</option>
-        <option value="Pinturas">Pinturas</option>
-        <option value="Electricos">Eléctricos</option>
-        <option value="Alquiler">Alquiler</option>
+        <?php
+include('src/php/categorias.php');
+        ?>
     </select>
 </div>
 <div>

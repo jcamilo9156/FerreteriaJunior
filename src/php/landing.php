@@ -19,7 +19,8 @@
    <header>
    <div class="header-bienvenida">
    <?php
-include('fecha-actual.php');
+//include('fecha-actual.php');
+include('mensaje-bienvenida.php');
 ?>
           <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
@@ -41,7 +42,7 @@ include('fecha-actual.php');
             <a href="../../frm-gest-inventario.php"><span class="material-icons-outlined iconos-opciones"> inventory</span></a><p>Gestionar Inventario</p>
         </div>
         <div>
-            <a href="index.html"><span class="material-icons-outlined iconos-opciones">point_of_sale</span></a> <p>Módulo de Ventas</p>
+        <a href="../../mod-ventas.php"><span class="material-icons-outlined iconos-opciones">point_of_sale</span></a> <p>Módulo de Ventas</p>
         </div>
         <div class="ultima">
             <a href="../../frm-gest-proveedores.php"><span class="material-icons iconos-opciones"> person_search</span></a><p>Gestionar Proveedores</p>

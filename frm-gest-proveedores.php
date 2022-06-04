@@ -100,7 +100,7 @@ include('src/php/fecha-actual.php');
 
 </div>
 <div class="botones-formulario">
-<button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>
+<button class="boton-formulario" type="reset" onclick="return confirmdelete()"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>
 <button class="boton-formulario" type="submit" name="guardar-proveedor"><i class="fa-solid fa-floppy-disk iconos-formularios guardar" title="Guardar los datos"> </i></button>
 </div>
 </div>
@@ -130,5 +130,8 @@ include('src/php/buscar-proveedores.php');
 
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
+    <script src="src/js/funcion-borrar.js"></script>
+   
+</script>
 </body>
 </html>
