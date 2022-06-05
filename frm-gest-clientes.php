@@ -143,12 +143,32 @@ include('src/php/tipo-cliente.php');
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-clientes">
 </form>
 </div>
+<div class='tablas'>
+<table>
+<tr>
+    <th>Id</th>
+       <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Razón Social</th>
+    <th>Tipo Identificación</th>
+    <th>Identificación</th>
+    <th>Dirección</th>
+       <th>Barrio</th>
+    <th>Ciudad</th>
+    <th>Teléfono</th>
+    <th>Tipo Cliente</th>
+    <th>Correo</th>
+    <th>Acción</th>
+    </tr>
+    </form>
+  
+</div>
 <?php
 include('src/php/buscar-clientes.php');
 
 ?>
 
-
+</table>
 
     
   
