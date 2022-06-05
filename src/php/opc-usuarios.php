@@ -15,9 +15,10 @@
 <body>
 
    <header>
+  
         <div class="header-bienvenida">
       
-     
+          <a href="landing.php"><i class="fa-solid fa-house  home" title="Ir a Inicio"></i></a>
           <a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>
@@ -33,6 +34,7 @@
 <input type="password"  maxlength ="10" class="input-formularios" name="password1" id="password1"><br>
 <label for="password2">Confirmar Contraseña<span class="required">*</span></label>
 <input type="password" maxlength="10"  class="input-formularios confirmar" name="password2" id="password2" ><br>
+<input type="submit" value="Guardar" name="actualizar-pass" class="save-pass-change">
 <div class="avisos">
 <?php  
 
@@ -40,12 +42,13 @@ require('cambio-password.php');
 
 ?>
 </div>
-<input type="submit" value="Guardar" name="actualizar-pass" class="save-pass-change">
 </form>
+<div class="avisos">
 
 </div>
-
 </div>
+
+
 
 
 
