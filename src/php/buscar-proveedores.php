@@ -7,8 +7,11 @@ include('conexion.php');
 $resultados = mysqli_query($conexion, "SELECT * FROM proveedores WHERE Categoria = '$Categoria'");
 include('cerrar-conexion.php');
 while ($consulta = mysqli_fetch_array($resultados)){
- if ($consulta =="") {
-     echo "No existe proveedor en la categoría seleccionada";
+ if (!$consulta) {
+    echo "
+    <div class='avisos'>
+    <p>No existe proveedor en la categoría seleccionada</p>";
+   
  }else {
     echo "
     <div class='tablas'>";
