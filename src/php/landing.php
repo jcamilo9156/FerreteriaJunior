@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,9 +20,7 @@
 
    <header>
    <div class="header-bienvenida">
-   <?php
-include('fecha-actual.php');
-?>
+ Hola <?php echo $nombre = $_SESSION['Nombres']; ?>
           <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>
@@ -50,7 +50,7 @@ include('fecha-actual.php');
         </div>
     <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
-    <script src= "src/js/menu-usuario.js"></script>
+    <script src= "../js/inactividad.js"></script>
 </body>
 </html>
 

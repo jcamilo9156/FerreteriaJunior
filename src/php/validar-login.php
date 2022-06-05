@@ -31,11 +31,12 @@ $_SESSION ['sesion_exitoso'] =0;
       include("conexion.php");
       $_SESSION['sesion_exitoso']=3; // Datos Incorrectos
       $resultado = mysqli_query( $conexion, "Select * FROM usuarios Where Usuario = '$usuario' and Clave = '$pass'");
+   
       while ($consulta = mysqli_fetch_array($resultado)) 
       {
 $_SESSION ['sesion_exitoso']=1; //Inicio sesión correcto
 header('location:src/php/landing.php');
-include("cerrar-conexion.php");
+
       }
   }
 
@@ -48,6 +49,12 @@ include("cerrar-conexion.php");
    
    
   }
+  $query =mysqli_query( $conexion, "SELECT Nombres FROM usuarios WHERE Usuario = '$usuario'");
+
+  $_SESSION['Nombres'] = $usuario;
+
+  include("cerrar-conexion.php");
 }
+ 
 
   ?>

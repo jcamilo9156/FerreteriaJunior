@@ -514,10 +514,11 @@ margin-right: 50px;
 }
 .caja-producto{
     width: 200px;
-    height: 400px;
+    height: 420px;
     border:solid rgba(25, 0, 255, 0.541);
     margin-bottom: 10px;
     border-radius: 5px;
+    
 }
 .caja-imagen{
     margin-top: 10px;
@@ -553,10 +554,12 @@ img{
 .boton-añadir-carrito{
     margin-top: 30px;
 margin-left: 35px;
+
 cursor: pointer;
     background:#c7bb1a;
     font-weight: bold;
     width: 130px;
+
 }
 .boton-añadir-carrito:hover{
     box-shadow: 5px 5px 5px rgb(112, 106, 106);

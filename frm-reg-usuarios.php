@@ -113,7 +113,7 @@
 <button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>
 <button class="boton-formulario" type="submit" name="guardar-usuario"><i class="fa-solid fa-floppy-disk iconos-formularios guardar" title="Guardar los datos"> </i></button>
 <!--<button class="boton-formulario" type="" id="borrar-user"><i class="fa-solid fa-user-xmark iconos-formularios borrar-user" title="Eliminar Usuario
-    Cuidado: Al hacer click se eliminará el usuario de la base de datos y tendrá que volverlo a registrar"></i></button>-->
+    Cuidado: Al hacer click se eliminará el usuario de la base de datos y tendrá que volverlo a registrar"></i></button-->
 </div>
 </form>
 </fieldset>
@@ -128,50 +128,40 @@ include('src/php/registrar-usuarios.php');
 </div>
     <h2 class="titulo-modulos">Búsqueda de Usuarios</h2>
 <div class="caja-busqueda">
-    <form action="src/php/borrar-usuario.php" method="post">
+
+    <form action="frm-reg-usuarios.php" method="post">
     <b>Digite el número de identificación del usuario</b>
     <input type="text" name="id-busqueda" class="input-formularios" maxlength="10">
     <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-usuarios">
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-users">
 </form>
-</div>
 
-<div class="tablas">
+        <div class='tablas'>
     <table>
         <tr>
         <th>Id</th>
-        <th>Cargo</th>
+        <th>Usuario</th>
+        <th>Clave</th>
         <th>Nombres</th>
         <th>Apellidos</th>
         <th>Identificación</th>
-        <th>Dirección</th>
+        <th>Direccion</th>
+        <th>Barrio</th>
         <th>Ciudad</th>
         <th>Teléfono</th>
         <th>Correo</th>
+        <th>Tipo Usuario</th>
         <th>Acción</th>
     </tr>
-    <tr>
-        <td>001</td>
-        <td>Administrador</td>
-        <td>Juan Camilo</td>
-        <td>Quezada Barreto</td>
-        <td>1121880528</td>
-        <td>Cra 13 a #38-20</td>
-        <td>Villavicencio</td>
-        <td>3005958121</td>
-        <td>jcamilo9156@hotmail.com</td>
-        <td>
-            <form action="" method="POST">
-            <input type="submit"value="Borrar" class="botones-tablas-borrar" name="borrar-usuario">
-            <input type="submit"value="Editar" class="botones-tablas-editar">
-        </td>
-        </form>
-    </tr>
+
+<?php
+include ('src/php/buscar-usuario.php');
+    ?>
+    </form>
+ 
     
     </table>
 </div>
--->
-    
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
 </body>

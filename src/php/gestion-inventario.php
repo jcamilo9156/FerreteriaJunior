@@ -22,12 +22,12 @@ if (!$resultado) {
     <p>Error</p>
     </div>";
 }
-} else {
+else {
   echo " <div class='avisos'>
   <p>Producto registrado satisfactoriamente</p>
   </div>";
 }
-
+}
  
 
 ?>
