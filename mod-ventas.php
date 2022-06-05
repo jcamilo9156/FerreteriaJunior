@@ -80,64 +80,7 @@ include ('src/php/categorias.php');
         <p>Cantidad a facturar</p><input class="input-cant-venta" type="text" name"cantidad">
         </div>
         <input type="submit" name="busqueda-producto-modulo-ventas" value="Añadir al  carrito" class="boton-añadir-carrito">
-</div>
-<div class="caja-producto">
-    <div class="caja-imagen">
-        <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-    </div>
-    <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-    </div>
-    
-    <div class="caja-producto">
-        <div class="caja-imagen">
-            <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-        </div>
-        <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-    </div>
-    <div class="caja-producto">
-        <div class="caja-imagen">
-            <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-        </div>
-        <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-    </div>
-    <div class="caja-producto">
-        <div class="caja-imagen">
-            <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-        </div>
-        <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-        </div>
-        
-        <div class="caja-producto">
-            <div class="caja-imagen">
-                <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-            </div>
-            <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-        </div>
-        <div class="caja-producto">
-            <div class="caja-imagen">
-                <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-            </div>
-            <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-        </div>
-        <div class="caja-producto">
-            <div class="caja-imagen">
-                <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-            </div>
-            <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-            </div>
-            
-            <div class="caja-producto">
-                <div class="caja-imagen">
-                    <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-                </div>
-                <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-            </div>
-            <div class="caja-producto">
-                <div class="caja-imagen">
-                    <img src="src/img/C.-Gris-UG-50-kg-Producto.png" alt="imagen-cemento">
-                </div>
-                <h3 class="Titulo-producto">Cemento Gris Marca Argos x50 kg</h3>
-            </div>
+</div>    
 </div>
     
 
