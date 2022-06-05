@@ -48,28 +48,8 @@ $consulta = mysqli_fetch_array($resultados);
         </div>";
     }
     
-    
-    else{
-    echo "
-    <div class='tablas'>";
-    echo "<table>";
     echo "<tr>";
-        echo "<th>Id</th>";
-       echo " <th>Nombres</th>";
-        echo "<th>Apellidos</th>";
-        echo "<th>Razón Social</th>";
-        echo "<th>Tipo Identificación</th>";
-        echo "<th>Identificación</th>";
-        echo "<th>Dirección</th>";
-       echo " <th>Barrio</th>";
-        echo "<th>Ciudad</th>";
-        echo "<th>Teléfono</th>";
-        echo "<th>Tipo Cliente</th>";
-        echo "<th>Correo</th>";
-        echo "<th>Acción</th>";
-
-    echo "</tr>";
-    echo "<tr>";
+    echo "<td>"; echo $consulta['Id_cliente']; echo "</td>";
        echo "<td>"; echo $consulta['Nombres']; echo "</td>";
         echo "<td>";  echo $consulta['Apellidos']; echo "</td>";
        echo  "<td>"; echo $consulta['Razon_Social']; echo "</td>";
@@ -86,14 +66,13 @@ $consulta = mysqli_fetch_array($resultados);
             <input type='submit'value='Borrar' class='botones-tablas-borrar' name='borrar-usuario'>
             <input type='submit'value='Editar' class='botones-tablas-editar'>
         </td>
-        </form>
+     
     </tr>
     
-    </table>
-</div>
+
     
     ";
 
 } 
 
-}
+

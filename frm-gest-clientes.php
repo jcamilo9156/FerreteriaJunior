@@ -162,14 +162,14 @@ include('src/php/tipo-cliente.php');
     </tr>
     </form>
   
-</div>
+
 <?php
 include('src/php/buscar-clientes.php');
 
 ?>
 
 </table>
-
+</div>
     
   
 
