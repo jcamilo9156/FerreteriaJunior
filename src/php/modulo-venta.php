@@ -1,23 +1,4 @@
 <?php
-if (isset($_POST['busqueda-producto-modulo-ventas'])){
-    include ('conexion.php');
-    $consulta = "SELECT * FROM productos";
-    $ejecutar = mysqli_query($conexion, $consulta) or die(mysqli_error($conexion));
-    ?>
-    
-    <?php
-                   foreach ($ejecutar as $opciones): ?>
-
-
-
-
-
-
-                <option value=" <?php echo $opciones['Categoria'] ?>"><?php echo $opciones['Categoria'] ?></option>
-                       
-                 <?php endforeach ?>
-
-                 <?php
 echo"
 <div class='caja-productos-main'>
 <div class='caja-producto'>
@@ -72,6 +53,6 @@ echo"
 </div>    
 </div>
 ";
-}
+
 
 ?>
