@@ -43,6 +43,8 @@ include ('src/php/categorias.php');
 </div>
 </div>
 </form>
+
+
 <?php
 include ('src/php/modulo-venta.php');
 ?>
