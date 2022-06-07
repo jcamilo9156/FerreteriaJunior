@@ -7,9 +7,9 @@ $sentencia = "DELETE FROM proveedores WHERE Id_proveedor ='$borrar'";
 $ejecucion = mysqli_query($conexion, $sentencia) or die("Error" .mysqli_error($conexion));
 include('cerrar-conexion.php');
 //echo($sentencia);
-//header('location:../../frm-gest-proveedores.php');
+header('location:../../frm-gest-proveedores.php');
 ?>
-<!-- Borrar Clientes-->
+
 
 
 
