@@ -22,8 +22,7 @@ while ($consulta = mysqli_fetch_array($resultados)){
         echo "<td>"; echo $consulta['Tipo_cliente']; echo "</td>";
         echo "<td>"; echo $consulta['Correo']; echo "</td>";
         echo "<td>
-            <form action=' method='POST'>
-            <input type='submit'value='Borrar' class='botones-tablas-borrar' name='borrar-usuario'>
+        <a href='src/php/borrar-cliente.php?Id_cliente=".$consulta['Id_cliente']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
             <input type='submit'value='Editar' class='botones-tablas-editar'>
         </td>";
     

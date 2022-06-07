@@ -122,16 +122,29 @@ include('src/php/proveedores.php');
     <input type="submit" value="Consultar" class="botones-busqueda proveedor" name="consulta-proveedor">
   
   <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-proveedores">
-</form>
+  </form>
 </div>
+    <div class="tablas">
+<table>
+<tr>
+    <th>Id</th>
+       <th>Nombre o Razón Social</th>
+    <th>Identificación</th>
+    <th>Dirección</th>
+    <th>Ciudad</th>
+    <th>Teléfono</th>
+    <th>Correo</th>
+    <th>Categoría</th>
+    <th>Acción</th>
+    </tr>
 <?php
 include('src/php/buscar-proveedores.php');
 ?>
-
+</div>
+</table>
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
     <script src="src/js/funcion-borrar.js"></script>
    
-</script>
 </body>
 </html>

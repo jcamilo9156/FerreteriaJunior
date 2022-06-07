@@ -5,7 +5,6 @@ if (isset($_POST['consulta-todos-users'])){
     include('cerrar-conexion.php');
     while ($consulta = mysqli_fetch_array($resultados)){
     echo "<tr>";
-        echo "<td>"; echo $consulta['id_usuario']; echo "</td>";
         echo "<td>"; echo $consulta['Usuario']; echo "</td>";
         echo "<td>"; echo $consulta['Clave']; echo "</td>";
         echo "<td>"; echo $consulta['Nombres']; echo "</td>";
@@ -17,13 +16,21 @@ if (isset($_POST['consulta-todos-users'])){
         echo "<td>"; echo $consulta['Telefono']; echo "</td>";
         echo "<td>"; echo $consulta['Correo']; echo "</td>";
         echo "<td>"; echo $consulta['Tipo_usuario']; echo "</td>";
-        echo "<td>";
-            echo "<input type='submit'value='Borrar' class='botones-tablas-borrar' name='borrar-usuario'>";
-            echo "<input type='submit'value='Editar' class='botones-tablas-editar'>";
-        echo "</td>";
+        echo "<td>
+        <a href='src/php/borrar-usuario.php?Usuario=".$consulta['Usuario']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
+            <input type='submit'value='Editar' class='botones-tablas-editar'>
+        </td>";
         
 
 }
 }
+if (isset($_POST['consulta-usuarios'])){
+$consulta_usuario = $_POST['id-busqueda'];
+if ($consulta_usuario =="") {
+    echo " <div class='avisos'>
+   <p>No has introducido ningún dato</p>
+   </div>";
+}
+} 
 
 ?>

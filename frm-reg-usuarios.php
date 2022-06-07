@@ -139,7 +139,6 @@ include('src/php/registrar-usuarios.php');
         <div class='tablas'>
     <table>
         <tr>
-        <th>Id</th>
         <th>Usuario</th>
         <th>Clave</th>
         <th>Nombres</th>
@@ -153,16 +152,15 @@ include('src/php/registrar-usuarios.php');
         <th>Tipo Usuario</th>
         <th>Acción</th>
     </tr>
-
-<?php
+    </form>
+    <?php
 include ('src/php/buscar-usuario.php');
     ?>
-    </form>
- 
     
     </table>
 </div>
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
+    <script src="src/js/funcion-borrar.js"></script>
 </body>
 </html>

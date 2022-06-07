@@ -92,5 +92,6 @@ include('src/php/categorias.php');
          </div>
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
+    <script src="src/js/funcion-borrar.js"></script>
 </body>
 </html>
