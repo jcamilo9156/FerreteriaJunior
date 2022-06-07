@@ -18,10 +18,14 @@ VALUES ('$nombres_cliente ', '$apellidos_cliente', '$razon_social', '$tipo_id', 
  // Ejecuto la consulta
 @$resultado = mysqli_query($conexion, $insertar); // Coloco arroba antes de variable para que no muestre mensaje warning y muestre el echo cuando sea duplicado
 include('src/php/cerrar-conexion.php');
-if (!@$resultado){
+echo $insertar;
+
+/*if (!@$resultado){
     echo "Ocurrió un error al registrar los datos o el cliente ya existe";
   } else {
     echo "Cliente Registrado Exitosamente";
   }
+  */
 }
+
 ?>

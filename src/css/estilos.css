@@ -44,7 +44,7 @@ input{
     }
     select{
         border-radius: 10px;
-       
+       max-width: 100%;
         margin-bottom: 0px;
         height: 26px;
         text-align: center;
@@ -277,6 +277,7 @@ margin-top: 30px;
     text-align: center;
     margin-bottom: 20px;
 }
+
 .input-formularios{
     margin-top: 10px;
     border-style:solid;
@@ -503,7 +504,9 @@ cursor: pointer;
 font-weight: bold;
 border: #4395F6;
 box-shadow: 5px 5px 5px rgb(112, 106, 106);
+width: 100%;
 }
+
 .caja-productos-main{
     margin-top: 20px;
     margin-left: 50px;

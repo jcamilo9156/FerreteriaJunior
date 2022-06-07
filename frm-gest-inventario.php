@@ -53,8 +53,8 @@ include('src/php/fecha-actual.php');
 <div>
     <label for="Ubicación">Ubicación</label><span class="required">*</span><br>
     <select class="select-formularios" name="ubicacion">
-        <option value="1"> Bodega 1</option>
-        <option value="2"> Bodega 2</option>
+        <option value="Bodega 1"> Bodega 1</option>
+        <option value="Bodega 2"> Bodega 2</option>
     </select>
 </div>
 <div>

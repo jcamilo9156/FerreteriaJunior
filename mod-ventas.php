@@ -27,18 +27,20 @@
             Módulo de Ventas
         </h1>   
         <div class="contenedor-busqueda">
-         <form action="mod-ventas.php" method="Post">
+         <form class=""action="mod-ventas.php" method="Post">
             <label for=""><center><p>Búsqueda de Producto</p></center></label>
         <input type="text" class="input-formularios input-ventas" placeholder="Nombre Producto"><br>
       
     <center><p>Filtrar por Categoría:</p></center>
-    <select class="select-formularios">
+    <center><select class="select-formularios"></center> 
         <?php
 include ('src/php/categorias.php');
 
 ?>
 </select>
+<div>
 <input type="submit" name="busqueda-producto-modulo-ventas" value="Buscar" class="boton-busqueda-ventas">
+</div>
 </div>
 </form>
 <?php

@@ -14,7 +14,7 @@ while ($consulta = mysqli_fetch_array($resultados)){
    </div>";
  }else {
         echo "<tr>";
-        echo "<td>"; echo $consulta['Id_proveedor']; echo "</td>";
+        
        echo "<td>"; echo $consulta['Nombre']; echo "</td>";
         echo "<td>";  echo $consulta['Identificacion']; echo "</td>";
        echo  "<td>"; echo $consulta['Direccion']; echo "</td>";
@@ -41,7 +41,6 @@ $resultados = mysqli_query($conexion, "SELECT * FROM proveedores");
 include('cerrar-conexion.php');
 while ($consulta = mysqli_fetch_array($resultados)){
         echo "<tr>";
-        echo "<td>"; echo $consulta['Id_proveedor']; echo "</td>";
        echo "<td>"; echo $consulta['Nombre']; echo "</td>";
         echo "<td>";  echo $consulta['Identificacion']; echo "</td>";
        echo  "<td>"; echo $consulta['Direccion']; echo "</td>";

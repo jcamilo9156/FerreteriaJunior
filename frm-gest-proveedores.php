@@ -127,7 +127,7 @@ include('src/php/proveedores.php');
     <div class="tablas">
 <table>
 <tr>
-    <th>Id</th>
+    
        <th>Nombre o Razón Social</th>
     <th>Identificación</th>
     <th>Dirección</th>
