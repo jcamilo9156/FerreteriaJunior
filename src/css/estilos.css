@@ -332,7 +332,17 @@ fieldset{
 
 
 .botones-formulario{
-    grid-column: 2/4;
+    grid-column: 4;
+}
+.subir-imagen{
+
+    grid-column: 3;
+}
+.subir-imagen-input{
+   border:none;
+   border-radius: 2px;
+    color: red;
+    grid-column:4/5;
 }
 
 .iconos-formularios{
@@ -566,4 +576,7 @@ cursor: pointer;
 }
 .boton-añadir-carrito:hover{
     box-shadow: 5px 5px 5px rgb(112, 106, 106);
+}
+.campo-texto{
+    grid-column: 5;
 }

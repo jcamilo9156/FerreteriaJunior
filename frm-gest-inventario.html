@@ -73,9 +73,14 @@ include('src/php/categorias.php');
     <label for="precio">Precio Día Alquiler</label><br>
     <input type="text" name="precio-alquiler" id="precio" placeholder="" class="input-formularios" required>
 </div>
+
 <div>
     <label for="observ">Observaciones</label><br>
-    <textarea name="observaciones" id="observ" cols="30" rows="3"></textarea>
+    <textarea name="observaciones" id="observ" cols="30" rows="3" class="campo-text"></textarea>
+</div>
+<div class="subir-imagen">
+    <label for="imagen">Subir Imagen</label><br>
+    <input type="file" name="precio-alquiler" id="precio" class="subir-imagen-input">
 </div>
 <div class="botones-formulario inventario">
 <button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>

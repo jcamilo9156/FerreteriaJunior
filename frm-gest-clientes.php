@@ -44,10 +44,10 @@ include('src/php/fecha-actual.php');
 <div>
     <label for="id">Tipo Identificación</label><span class="required">*</span><br>
     <select class="select-formularios" name="Tipo-Identificacion">
-        <option value="Cedula">Cédula Ciudadanía</option>
+        <option value="Cédula Ciudadanía">Cédula Ciudadanía</option>
         <option value="NIT">NIT</option>
         <option value="RUT">RUT</option>
-        <option value="Cedula_EXT">Cédula Extranjería</option>
+        <option value="Cedula Extranjería">Cédula Extranjería</option>
     </select>
 </div>
 

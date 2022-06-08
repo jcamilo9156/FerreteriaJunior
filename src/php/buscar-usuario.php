@@ -3,6 +3,7 @@ if (isset($_POST['consulta-todos-users'])){
     include ('conexion.php');
     $resultados = mysqli_query($conexion, "SELECT * FROM usuarios");
     include('cerrar-conexion.php');
+    
     while ($consulta = mysqli_fetch_array($resultados)){
     echo "<tr>";
         echo "<td>"; echo $consulta['Usuario']; echo "</td>";
@@ -22,7 +23,7 @@ if (isset($_POST['consulta-todos-users'])){
         </td>";
         
 
-}
+}   
 }
 if (isset($_POST['consulta-usuarios'])){
 $consulta_usuario = $_POST['id-busqueda'];
@@ -35,7 +36,13 @@ if ($consulta_usuario =="") {
     include ('conexion.php');
     $resultados = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Identificacion = '$consulta_usuario' ");
     include('cerrar-conexion.php');
-    while ($consulta = mysqli_fetch_array($resultados)){
+    $consulta = mysqli_fetch_array($resultados);
+    if (!$consulta) {
+        echo " <div class='avisos'>
+        <p>No existe usuario con ese número de identificación</p>
+        </div>";
+        return false;
+    }
     echo "<tr>";
         echo "<td>"; echo $consulta['Usuario']; echo "</td>";
         echo "<td>"; echo $consulta['Clave']; echo "</td>";
@@ -57,5 +64,6 @@ if ($consulta_usuario =="") {
 }
 
 }
-}
+
+
 ?>
