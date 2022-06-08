@@ -1,12 +1,22 @@
 <?php
 if (isset($_POST['busqueda-producto-modulo-ventas'])) {
-    echo"
+$cat_producto = $_POST['categoria-productos'];
+include ('conexion.php');
+$consulta = "SELECT * FROM clientes";
+$ejecucion = mysqli_query($conexion, $consulta);
+
+}
+?>
+
+
+<?php
+/*
 <div class='caja-productos-main'>
 <div class='caja-producto'>
 <div class='caja-imagen'>
     <img src='src/img/C.-Gris-UG-50-kg-Producto.png' alt='imagen-cemento'>
 </div>
-<h3 class='Titulo-producto'>Cemento Gris Marca Argos x50 kg</h3>
+<h3 class='Titulo-producto'>"; echo $resultado['Nombre']; echo"</h3>
 <div class='contenido'>
 <p>Estado</p><p class='estado-producto'> Disponible</p>
 </div>
@@ -30,7 +40,8 @@ if (isset($_POST['busqueda-producto-modulo-ventas'])) {
 ";
 
 }
+}
 
-
-
+*/
 ?>
+

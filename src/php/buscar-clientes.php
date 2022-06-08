@@ -1,6 +1,6 @@
 <?php
 
-if((isset($_POST['consulta-todos-clientes']))){
+if(isset($_POST['consulta-todos-clientes'])){
     //$id_user = $_POST['id-client-search'];
     include('conexion.php');
 

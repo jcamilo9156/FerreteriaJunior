@@ -27,12 +27,12 @@
             Módulo de Ventas
         </h1>   
         <div class="contenedor-busqueda">
-         <form class=""action="mod-ventas.php" method="Post">
+         <form action="src/php/modulo-venta.php" method="Post">
             <label for=""><center><p>Búsqueda de Producto</p></center></label>
-        <input type="text" class="input-formularios input-ventas" placeholder="Nombre Producto"><br>
+        <input type="text" class="input-formularios input-ventas" placeholder="Nombre Producto" name="nombre-producto"><br>
       
     <center><p>Filtrar por Categoría:</p></center>
-    <center><select class="select-formularios"></center> 
+    <center><select class="select-formularios" name="categoria-productos"></center> 
         <?php
 include ('src/php/categorias.php');
 
@@ -43,8 +43,6 @@ include ('src/php/categorias.php');
 </div>
 </div>
 </form>
-
-
 <?php
 include ('src/php/modulo-venta.php');
 ?>

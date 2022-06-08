@@ -35,7 +35,7 @@ include('src/php/fecha-actual.php');
 </div>
 <div>
     <label for="proveedor">Proveedor</label><span class="required">*</span><br>
-    <select name="proveedor" id="proveedor" class="select-formularios">
+    <select name="proveedor" id="" class="select-formularios">
         <?php 
     include ('src/php/lista-proveedores.php');
         ?>
@@ -90,6 +90,43 @@ include('src/php/categorias.php');
    </form>
      </fieldset>
          </div>
+         <br>
+        <h2 class="titulo-modulos">Búsqueda de Productos</h2>
+<div class="caja-busqueda">
+<div class="caja-busqueda">
+    <form action="" method="POST">
+    <b>Buscar por categoría</b>
+    <select class="select-formularios" name="cat_producto">
+    <?php
+        include ('src/php/categorias.php');
+        ?>
+</select>
+<b>Buscar por Nombre</b>
+<input type= "text" name="id-producto">
+    <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-producto">
+    <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-productos">
+</form>
+</div>
+         <div class="tablas">
+<table>
+<tr>
+       <th>Nombre</th>
+    <th>Categoría</th>
+    <th>Precio Unitario</th>
+    <th>Precio Día Alquiler</th>
+    <th>Stock</th>
+    <th>Ubicación</th>
+    <th>Detalle Producto</th>
+    <th>Fecha Ingreso</th>
+    <th>Proveedor</th>
+    <th>Acción</th>
+    </tr>
+<?php
+include('src/php/buscar-producto.php');
+?>
+</div>
+</table>
+
    <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
     <script src="src/js/funcion-borrar.js"></script>
