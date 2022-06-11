@@ -27,7 +27,7 @@ include('src/php/fecha-actual.php');
             Gestión de Inventario
         </h1>   
         <fieldset class="field-inv"><legend>Formulario Registro Productos</legend>
-<form action="frm-gest-inventario.php" class="forms" method="POST">
+<form action="frm-gest-inventario.php" class="forms" method="POST" enctype="multipart/form-data">
  
 <div>
     <label for="name">Nombre Producto</label><span class="required">*</span><br>
@@ -80,7 +80,7 @@ include('src/php/categorias.php');
 </div>
 <div class="subir-imagen">
     <label for="imagen">Subir Imagen</label><br>
-    <input type="file" name="precio-alquiler" id="precio" class="subir-imagen-input">
+    <input type="file" name="foto-producto" id="precio" class="subir-imagen-input">
 </div>
 <div class="botones-formulario inventario">
 <button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>
@@ -106,8 +106,6 @@ include('src/php/categorias.php');
         include ('src/php/categorias.php');
         ?>
 </select>
-<b>Buscar por Nombre</b>
-<input type= "text" name="id-producto">
     <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-producto">
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-productos">
 </form>

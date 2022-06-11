@@ -9,9 +9,9 @@ $ejecucion = mysqli_query($conexion, $consulta);
 WHILE($arreglo = mysqli_fetch_array($ejecucion)){;
     echo "
     <div class='caja-producto'>
-    <div class='caja-imagen'>
-        <img src='src/img/C.-Gris-UG-50-kg-Producto.png' alt='imagen-cemento'>
-    </div>
+    <div class='caja-imagen'>";?>
+      <img src="<?php echo $arreglo['Foto'];?>"><?php
+    echo"</div>
     <h3 class='Titulo-producto'>"; echo $arreglo['Nombre']; echo"</h3>
     <div class='contenido'>
     <p>Stock</p><p class='estado-producto'>"; echo $arreglo['Stock']; echo"</p>

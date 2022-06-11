@@ -1,5 +1,16 @@
 <?php
+
+
 if (isset($_POST['guardar-producto'])){
+  /// Carga de imagen - variables
+  $nombreimag = $_FILES['foto-producto']['name']; //obtiene nombre
+  $archivo= $_FILES['foto-producto']['tmp_name']; // contiene el archivo
+  $ruta= "src/img";
+  
+  $ruta=$ruta."/".$nombreimag; //src/img/nombre.jpg
+  
+  move_uploaded_file($archivo, $ruta); //mueve el archivo
+  // Fin carga imagen
 
     $nombreproducto = $_POST['nombre-producto'];
     $proveedor = $_POST['proveedor'];
@@ -12,8 +23,8 @@ if (isset($_POST['guardar-producto'])){
     $observaciones = $_POST['observaciones'];
 
   include('conexion.php');
- $insertar = "INSERT INTO productos (Nombre, Proveedor,Stock, Fecha_ingreso,Categoria, Precio, Precio_Dia_Alquiler, Ubicacion, Detalle_Producto)
-  VALUES ('$nombreproducto', '$proveedor','$cantidad','$fechaingreso','$categoria', '$precio_venta', ' $precio_alquiler','$ubicacion', '$observaciones')";
+ $insertar = "INSERT INTO productos (Nombre, Proveedor,Stock, Fecha_ingreso,Categoria, Precio, Precio_Dia_Alquiler, Ubicacion, Detalle_Producto, Foto)
+  VALUES ('$nombreproducto', '$proveedor','$cantidad','$fechaingreso','$categoria', '$precio_venta', ' $precio_alquiler','$ubicacion', '$observaciones', '$ruta')";
   $resultado = mysqli_query($conexion, $insertar);
   include('cerrar-conexion.php');
 
