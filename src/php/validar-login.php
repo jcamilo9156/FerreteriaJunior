@@ -44,7 +44,7 @@ header('location:src/php/landing.php');
    {
     echo "
     <div class='avisos'>
-    <p>Datos Incorrectos</p>";
+    <p>Datos Incorrectos o usuario no existe</p>";
     return false;
    
    
