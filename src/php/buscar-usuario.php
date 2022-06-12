@@ -2,8 +2,10 @@
 if (isset($_POST['consulta-todos-users'])){
     include ('conexion.php');
     $resultados = mysqli_query($conexion, "SELECT * FROM usuarios");
-    include('cerrar-conexion.php');
-    
+    include('cerrar-conexion.php');?>
+<!-- Boton para generar PDF al hacer click en todos -->
+    <a href="reportes.php">Generar PDF</a>
+    <?php
     while ($consulta = mysqli_fetch_array($resultados)){
     echo "<tr>";
         echo "<td>"; echo $consulta['Usuario']; echo "</td>";

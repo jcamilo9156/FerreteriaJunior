@@ -152,9 +152,9 @@ include('src/php/registrar-usuarios.php');
         <th>Tipo Usuario</th>
         <th>Acción</th>
     </tr>
-    </form>
     <?php
 include ('src/php/buscar-usuario.php');
+
     ?>
     
     </table>
