@@ -141,7 +141,7 @@ include('src/php/tipo-cliente.php');
     <input type="text" name="id-client-search" class="input-formularios" maxlength="10">
     <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-clientes">
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-clientes">
-    <a href="reportes.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
+    <a href="src/php/reporte-clientes.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
 </form>
 </div>
 <div class='tablas'>

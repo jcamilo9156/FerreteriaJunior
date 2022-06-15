@@ -52,6 +52,21 @@ if (isset($_POST['consulta-clientes'])){
         </div>";
         return false;
     }else{
+        echo "<table>
+        <tr>
+               <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Razón Social</th>
+            <th>Tipo Identificación</th>
+            <th>Identificación</th>
+            <th>Dirección</th>
+               <th>Barrio</th>
+            <th>Ciudad</th>
+            <th>Teléfono</th>
+            <th>Tipo Cliente</th>
+            <th>Correo</th>
+            <th>Acción</th>
+            </tr>";
     include('conexion.php');
 
 $resultados = mysqli_query($conexion, "SELECT * FROM clientes WHERE Identificacion ='$consul_clientes'");
@@ -65,7 +80,6 @@ $consulta = mysqli_fetch_array($resultados);
     }
     
     echo "<tr>";
-    echo "<td>"; echo $consulta['Id_cliente']; echo "</td>";
        echo "<td>"; echo $consulta['Nombres']; echo "</td>";
         echo "<td>";  echo $consulta['Apellidos']; echo "</td>";
        echo  "<td>"; echo $consulta['Razon_Social']; echo "</td>";

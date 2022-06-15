@@ -108,22 +108,11 @@ include('src/php/categorias.php');
 </select>
     <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-producto">
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-productos">
+    <a href="src/php/reporte-inventario.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
 </form>
 </div>
          <div class="tablas">
-<table>
-<tr>
-       <th>Nombre</th>
-    <th>Categoría</th>
-    <th>Precio Unitario</th>
-    <th>Precio Día Alquiler</th>
-    <th>Stock</th>
-    <th>Ubicación</th>
-    <th>Detalle Producto</th>
-    <th>Fecha Ingreso</th>
-    <th>Proveedor</th>
-    <th>Acción</th>
-    </tr>
+
 <?php
 include('src/php/buscar-producto.php');
 ?>

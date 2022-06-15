@@ -1,6 +1,18 @@
 <?php
 
 if (isset($_POST['consulta-proveedor'])){
+   echo" <table>
+<tr>
+    
+       <th>Nombre o Razón Social</th>
+    <th>Identificación</th>
+    <th>Dirección</th>
+    <th>Ciudad</th>
+    <th>Teléfono</th>
+    <th>Correo</th>
+    <th>Categoría</th>
+    <th>Acción</th>
+    </tr>";
 $Categoria = $_POST['id-proveedor-busqueda'];
 
 include('conexion.php');
@@ -36,6 +48,17 @@ if (isset($_POST['borrar-usuario'])){
 
 }
  if (isset($_POST['consulta-todos-proveedores'])){
+    echo" <table>
+    <tr>
+           <th>Nombre o Razón Social</th>
+        <th>Identificación</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+        <th>Categoría</th>
+        <th>Acción</th>
+        </tr>";
     include('conexion.php');
 $resultados = mysqli_query($conexion, "SELECT * FROM proveedores");
 include('cerrar-conexion.php');

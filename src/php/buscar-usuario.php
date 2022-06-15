@@ -52,6 +52,22 @@ if ($consulta_usuario =="") {
    </div>";
 }
  else {
+    echo "
+    <table>
+    <tr>
+    <th>Usuario</th>
+    <th>Clave</th>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Identificación</th>
+    <th>Direccion</th>
+    <th>Barrio</th>
+    <th>Ciudad</th>
+    <th>Teléfono</th>
+    <th>Correo</th>
+    <th>Tipo Usuario</th>
+    <th>Acción</th>
+</tr>";
     include ('conexion.php');
     $resultados = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Identificacion = '$consulta_usuario' ");
     include('cerrar-conexion.php');
@@ -62,6 +78,7 @@ if ($consulta_usuario =="") {
         </div>";
         return false;
     }
+  
     echo "<tr>";
         echo "<td>"; echo $consulta['Usuario']; echo "</td>";
         echo "<td>"; echo $consulta['Clave']; echo "</td>";
