@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,7 +20,9 @@ session_start();
 
    <header>
    <div class="header-bienvenida">
- Hola <?php  echo $_SESSION; ?>
+       <?php
+       include('fecha-actual.php');
+  ?>
 
 
 

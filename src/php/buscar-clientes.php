@@ -3,7 +3,23 @@
 if(isset($_POST['consulta-todos-clientes'])){
     //$id_user = $_POST['id-client-search'];
     include('conexion.php');
-
+echo "<table>
+<tr>
+    <th>Id</th>
+       <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Razón Social</th>
+    <th>Tipo Identificación</th>
+    <th>Identificación</th>
+    <th>Dirección</th>
+       <th>Barrio</th>
+    <th>Ciudad</th>
+    <th>Teléfono</th>
+    <th>Tipo Cliente</th>
+    <th>Correo</th>
+    <th>Acción</th>
+    </tr>";
+    
 $resultados = mysqli_query($conexion, "SELECT * FROM clientes");
 include('cerrar-conexion.php');
 while ($consulta = mysqli_fetch_array($resultados)){

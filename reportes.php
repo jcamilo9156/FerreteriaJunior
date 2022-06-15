@@ -45,7 +45,7 @@ $query = "SELECT * FROM usuarios";
 $ejecucion = mysqli_query($conexion, $query); ?>
 
 <div>
-<table class="table table-bordered">
+<table>
     <tr>
     <th>Usuario</th>
     <th>Clave</th>

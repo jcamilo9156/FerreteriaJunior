@@ -49,9 +49,7 @@ header('location:src/php/landing.php');
    
    
   }
-  $query =mysqli_query( $conexion, "SELECT Nombres FROM usuarios WHERE Usuario = '$usuario'");
 
-  $_SESSION['Nombres'] = $usuario;
 
   include("cerrar-conexion.php");
 }
