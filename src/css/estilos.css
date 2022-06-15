@@ -580,3 +580,14 @@ cursor: pointer;
 .campo-texto{
     grid-column: 5;
 }
+.icono-pdf{
+    color: red;
+    font-size: 25px;
+}
+.generar-pdf{
+
+font-weight: bold;
+color:black;
+margin-bottom: 45px;
+margin-left: 10px;
+}

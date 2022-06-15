@@ -9,10 +9,31 @@ ob_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reportes</title>
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="preload" href="src/css/estilos.css" as="style">
-    <link href="src/css/estilos.css" rel="stylesheet" type="text/css">
+    <!-- Aplico estilos a la tabla ya que no me cargan estilos externos -->
+   <style>
+       @page{
+           margin-left: 0;
+           margin-right: 0;
+       }
+       h1{
+           color: red;
+        font-family:sans-serif;
+       }
+       th {
+           background-color: red;
+       }
+
+td,th{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: black 1px solid;
+    width: 5%;
+}
+th{
+    background-color: #c7bb1a;
+    height: 30px;
+
+}
+       </style>
 <body>
    <center><h1>Reporte de usuarios del sistema</h1></center> 
 <?php
@@ -67,6 +88,7 @@ $html = ob_get_clean();
 
 require_once ('libreria/dompdf/autoload.inc.php');
 use Dompdf\Dompdf;
+use Dompdf\Css\Stylesheet;
 $dompdf = new Dompdf();
 
 $options = $dompdf ->getOptions();
@@ -74,8 +96,7 @@ $options -> set(array('isRemoteEnabled' => true));
 $dompdf ->setOptions($options);
 
 $dompdf ->loadHtml($html);
-$dompdf->setPaper( [0, 0, 853,582,  283,465]); // Medida establecida de 30 cms ancho convertida a puntos tipográficos
-
+$dompdf->setPaper( [0, 0, 853,582,  283,465]); 
 /* Opciones de papel
 $dompdf->setPaper('letter');
 $dompdf->setPaper('A4', 'horizontal');

@@ -20,7 +20,12 @@ session_start();
 
    <header>
    <div class="header-bienvenida">
- Hola <?php echo $nombre = $_SESSION['Nombres']; ?>
+ Hola <?php  echo $_SESSION; ?>
+
+
+
+
+
           <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>

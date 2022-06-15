@@ -1,10 +1,27 @@
 <?php
-if (isset($_POST['consulta-todos-users'])){
+if (isset($_POST['consulta-todos-users'])){ ?>
+<?php echo "
+    <table>
+    <tr>
+    <th>Usuario</th>
+    <th>Clave</th>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Identificación</th>
+    <th>Direccion</th>
+    <th>Barrio</th>
+    <th>Ciudad</th>
+    <th>Teléfono</th>
+    <th>Correo</th>
+    <th>Tipo Usuario</th>
+    <th>Acción</th>
+</tr>"?>
+<?php
     include ('conexion.php');
     $resultados = mysqli_query($conexion, "SELECT * FROM usuarios");
     include('cerrar-conexion.php');?>
 <!-- Boton para generar PDF al hacer click en todos -->
-    <a href="reportes.php">Generar PDF</a>
+
     <?php
     while ($consulta = mysqli_fetch_array($resultados)){
     echo "<tr>";
