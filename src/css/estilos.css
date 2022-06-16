@@ -306,6 +306,7 @@ margin-top: 30px;
 }
 .titulo-modulos{
   text-align: center;
+  margin-top: 30px;
 }
 fieldset{
     border-radius: 20px;
@@ -545,7 +546,7 @@ img{
 .Titulo-producto{
 
     text-align: center;
-}
+}href
 .input-cant-venta{
     width: 50%;
     font-weight: bold;
