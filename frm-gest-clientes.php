@@ -121,8 +121,6 @@ include('src/php/tipo-cliente.php');
 <div class="botones-formulario">
 <button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>
 <button class="boton-formulario" type="submit" name="guardar-cliente"><i class="fa-solid fa-floppy-disk iconos-formularios guardar" title="Guardar los datos"> </i></button>
-<!--<button class="boton-formulario" type="" id="borrar-user"><i class="fa-solid fa-user-xmark iconos-formularios borrar-user" title="Eliminar Usuario
-    Cuidado: Al hacer click se eliminará el usuario de la base de datos y tendrá que volverlo a registrar"></i></button>-->
 </div>
 </form>
 </div>

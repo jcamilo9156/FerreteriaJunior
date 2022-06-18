@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="../css/estilos.css" as="style">
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+
+
 <?php
 if (isset($_POST['busqueda-producto-modulo-ventas'])) {
 $cat_producto = $_POST['categoria-productos'];
@@ -32,7 +46,8 @@ WHILE($arreglo = mysqli_fetch_array($ejecucion)){;
 
 
 ?>
-
+</body>
+</html>
 
 <?php
 /*

@@ -38,7 +38,7 @@ if (isset($_POST['consulta-todos-users'])){ ?>
         echo "<td>"; echo $consulta['Tipo_usuario']; echo "</td>";
         echo "<td>
         <a href='src/php/borrar-usuario.php?Usuario=".$consulta['Usuario']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
-        <a href='src/php/modificar-usuario.php?Usuario=".$consulta['Usuario']."'><input type='submit' value='Editar' class='botones-tablas-borrar'></a>
+        <a href='src/php/modificar-usuario.php?Usuario=".$consulta['Usuario']."'><input type='submit' value='Editar' class='botones-tablas-editar'></a>
         </td>";
         
 

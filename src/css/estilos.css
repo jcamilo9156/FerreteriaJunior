@@ -546,11 +546,10 @@ img{
 .Titulo-producto{
 
     text-align: center;
-}href
+}
 .input-cant-venta{
     width: 50%;
     font-weight: bold;
-   
     border: solid;
     box-shadow: 5px 5px 5px rgb(112, 106, 106);
 }

@@ -5,7 +5,6 @@ if(isset($_POST['consulta-todos-clientes'])){
     include('conexion.php');
 echo "<table>
 <tr>
-    <th>Id</th>
        <th>Nombres</th>
     <th>Apellidos</th>
     <th>Razón Social</th>
@@ -25,7 +24,6 @@ include('cerrar-conexion.php');
 while ($consulta = mysqli_fetch_array($resultados)){
     
     echo "<tr>";
-        echo "<td>"; echo $consulta['Id_cliente']; echo "</td>";
        echo "<td>"; echo $consulta['Nombres']; echo "</td>";
         echo "<td>";  echo $consulta['Apellidos']; echo "</td>";
        echo  "<td>"; echo $consulta['Razon_Social']; echo "</td>";
