@@ -29,11 +29,11 @@
 <form action="frm-reg-usuarios.php" class="forms" method="post">
     <div>
     <label for="user">Usuario</label><span class="required">*</span><br>
-    <input type="text" name="user" id="user" placeholder="1140125320" class="input-formularios" autofocus maxlength="10">
+    <input type="text" name="user" id="user" class="input-formularios" autofocus maxlength="10">
 </div>
 <div>
     <label for="password">Clave:</label><span class="required">*</span><br>
-    <input type="password" name="password" id="password" placeholder="Sena1234*-"  class="input-formularios" maxlength="10" required>
+    <input type="password" name="password" id="password"  class="input-formularios" maxlength="10" required>
 </div>
 <div class="campo-form">
     <label for="">Tipo de Usuario</label><span class="required">*</span></p>
@@ -45,23 +45,23 @@
 </div>
 <div>
     <label for="name">Nombres</label><span class="required">*</span><br>
-    <input type="text" name="nombres" id="name" placeholder="Juan Camilo" class="input-formularios" required>
+    <input type="text" name="nombres" id="name" class="input-formularios" required>
 </div>
 <div>
     <label for="Apellidos">Apellidos</label><span class="required">*</span><br>
-    <input type="text" name="apellidos" id="Apellidos" placeholder="Quezada Barreto" class="input-formularios"required>
+    <input type="text" name="apellidos" id="Apellidos"  class="input-formularios"required>
 </div>
 <div>
     <label for="id">Identificación</label><span class="required">*</span><br>
-    <input type="text" name="id" id="id" placeholder="1234567890" class="input-formularios" maxlength="10" required>
+    <input type="text" name="id" id="id" class="input-formularios" maxlength="10" required>
 </div>
 <div>
     <label for="direccion">Dirección</label><span class="required">*</span><br>
-    <input type="text" name="direccion" id="direccion" placeholder="Carrera 19 # 35-40" class="input-formularios" required>
+    <input type="text" name="direccion" id="direccion" class="input-formularios" required>
 </div>
 <div>
     <label for="barrio">Barrio</label><br>
-    <input type="text" name="barrio" id="barrio" placeholder="Belén" class="input-formularios">
+    <input type="text" name="barrio" id="barrio" class="input-formularios">
 </div>
 <div>
     <label for="city">Ciudad</label><span class="required">*</span><br>
@@ -103,11 +103,11 @@
 </div>
 <div>
     <label for="tel">Teléfono</label><br>
-    <input type="tel" name="tel" id="tel" placeholder="3005958121" class="input-formularios" required>
+    <input type="tel" name="tel" id="tel" class="input-formularios" required>
 </div>
 <div>
     <label for="e-mail">Correo</label><span class="required">*</span><br>
-    <input type="email" name="e-mail" id="e-mail" placeholder="jcquezada@misena.edu.co" class="input-formularios correo" required>
+    <input type="email" name="e-mail" id="e-mail"  class="input-formularios correo" required>
 </div>
 <div class="botones-formulario">
 <button class="boton-formulario" type="reset"><i class="fa-solid fa-xmark iconos-formularios borrar" title="Borrar Campos"></i></button>

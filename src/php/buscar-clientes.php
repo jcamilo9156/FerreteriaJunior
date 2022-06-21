@@ -37,7 +37,8 @@ while ($consulta = mysqli_fetch_array($resultados)){
         echo "<td>"; echo $consulta['Correo']; echo "</td>";
         echo "<td>
         <a href='src/php/borrar-cliente.php?Id_cliente=".$consulta['Id_cliente']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
-            <input type='submit'value='Editar' class='botones-tablas-editar'>
+        <a href='src/php/modificar-clientes.php?Id_cliente=".$consulta['Id_cliente']."'><input type='submit' value='Editar' class='botones-tablas-editar'></a>
+
         </td>";
     
 }
@@ -92,7 +93,8 @@ $consulta = mysqli_fetch_array($resultados);
         echo "<td>
            
         <a href='src/php/borrar-cliente.php?Id_cliente=".$consulta['Id_cliente']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
-            <input type='submit'value='Editar' class='botones-tablas-editar'>
+        <a href='src/php/modificar-clientes.php?Id_cliente=".$consulta['Id_cliente']."'><input type='submit' value='Editar' class='botones-tablas-editar'></a>
+
         </td>
      
     </tr>

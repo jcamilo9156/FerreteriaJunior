@@ -36,7 +36,8 @@ while ($consulta = mysqli_fetch_array($resultados)){
         echo "<td>"; echo $consulta['Categoria']; echo "</td>";
         echo "<td>
         <a href='src/php/borrar-proveedor.php?Id_proveedor=".$consulta['Id_proveedor']."'><input type='submit' value='Borrar' class='botones-tablas-borrar' name='borrar-usuario' onclick='return confirmdelete()'></a>
-        <input type='submit'value='Editar' class='botones-tablas-editar'>
+        <a href='src/php/modificar-proveedores.php?Identificacion=".$consulta['Identificacion']."'><input type='submit' value='Editar' class='botones-tablas-editar'></a>
+
     </form>
     </td>
 </tr>
@@ -74,7 +75,7 @@ while ($consulta = mysqli_fetch_array($resultados)){
         echo "<td>
        
         <a href='src/php/borrar-proveedor.php?Id_proveedor=".$consulta['Id_proveedor']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
-        <input type='submit'value='Editar' class='botones-tablas-editar'>
+        <a href='src/php/modificar-proveedores.php?Identificacion=".$consulta['Identificacion']."'><input type='submit' value='Editar' class='botones-tablas-editar'></a>
     </td>
     </form>
 </tr>";

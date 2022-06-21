@@ -5,41 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferreteria Junior</title>
-    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
-    <link rel="preload" href="src/css/estilos.css" as="style">
-    <link href="src/css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="../css/estilos.css" as="style">
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css">
   
 </head>
-<body>
-    <div class="main-container">
+<div class="main-container">
         <header>
             <div class="header-bienvenida">
                 <?php
-include('src/php/fecha-actual.php');
+include('fecha-actual.php');
                 ?>
-           <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="src/php/landing.php"><i class="fa-solid fa-house  home" title="Ir a Inicio"></i></a><a href="src/php/logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
+           <i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i><a href="landing.php"><i class="fa-solid fa-house  home" title="Ir a Inicio"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
             </div>
         </header>
         <h1 class="titulo-modulos">
-            Gestión de Proveedores
+            Modificar Proveedores
         </h1>   
-        <fieldset class="form-proveedores"><legend>Formulario Registro Proveedores</legend>
-<form action="frm-gest-proveedores.php" class="forms" method="post">
+<body>
+
+<?php
+
+include ('conexion.php');
+$identificacion = $_GET['Identificacion'];
+$query = "SELECT * FROM proveedores WHERE Identificacion = $identificacion";
+$ejecucion = mysqli_query($conexion, $query) or die("Error" .mysqli_error($conexion));
+while ($arreglo = mysqli_fetch_array($ejecucion)){?>
+ <div class="contenedor-formulario">
+        <fieldset class="form-proveedores"><legend>Formulario Modificación Proveedores</legend>
+<form action="actualizar-proveedor.php" class="forms" method="post">
  
 <div>
     <label for="name">Nombre o Razón Social</label><span class="required">*</span><br>
-    <input type="text" name="Nombre" id="name" placeholder="" class="input-formularios" autofocus required>
+    <input type="text" name="Nombre" id="name" value ="<?php echo $arreglo['Nombre'];?>" class="input-formularios" autofocus required>
 </div>
 <div>
     <label for="id">Identificación</label><span class="required">*</span><br>
-    <input type="text" name="ID" id="id" class="input-formularios" required maxlength="12"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" /> 
+    <input type="text" name="ID" id="id" value ="<?php echo $arreglo['Identificacion'];?>"class="input-formularios" required maxlength="12"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" />
 </div>
 <div>
     <label for="name">Dirección</label><span class="required">*</span><br>
-    <input type="text" name="Direccion" id="name"  class="input-formularios" required>
+    <input type="text" name="Direccion" id="name" value ="<?php echo $arreglo['Direccion'];?>" class="input-formularios" required>
 </div>
 <div>
     <label for="city">Ciudad</label><span class="required">*</span><br>
@@ -81,19 +90,18 @@ include('src/php/fecha-actual.php');
 </div>
 <div>
     <label for="tel">Teléfono</label><br>
-    <input type="tel" id="tel" name="Telefono"  class="input-formularios" required>
+    <input type="tel" id="tel" name="Telefono" value ="<?php echo $arreglo['Telefono'];?>" class="input-formularios" required>
 </div>
 <div>
     <label for="e-mail">Correo</label><span class="required">*</span><br>
-    <input type="email" id="e-mail" name="Correo"  class="input-formularios correo" required>
+    <input type="email" id="e-mail" name="Correo"  value ="<?php echo $arreglo['Correo'];?>" class="input-formularios correo" required>
 </div>
 <div>
     <b>Categoría</b><br>
     <select class="select-formularios" name="categoria-proveedor">
         <?php
-        include ('src/php/categorias.php');
-        ?>
-                   
+        include ('categorias.php');
+               } ?>  
                    
                   
 </select>
@@ -104,38 +112,9 @@ include('src/php/fecha-actual.php');
 <button class="boton-formulario" type="submit" name="guardar-proveedor"><i class="fa-solid fa-floppy-disk iconos-formularios guardar" title="Guardar los datos"> </i></button>
 </div>
 </div>
-<?php
-include('src/php/proveedores.php');
-        ?>
 </form>
-</fieldset>
-<h2 class="titulo-modulos">Búsqueda de Proveedores</h2>
-<div class="caja-busqueda">
-    <form action="" method="post">
-    <b>Buscar por categoría</b>
-    <select class="select-formularios" name="id-proveedor-busqueda">
-    <?php
-        include ('src/php/categorias.php');
-        ?>
-</select>
-
-    <input type="submit" value="Consultar" class="botones-busqueda proveedor" name="consulta-proveedor">
-  
-  <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-proveedores">
-  <a href="src/php/reporte-inventario.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
-
-  </form>
-</div>
-    <div class="tablas">
-
-<?php
-include('src/php/buscar-proveedores.php');
-?>
-</div>
-</table>
-   <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
+<footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
-    <script src="src/js/funcion-borrar.js"></script>
-   
 </body>
 </html>
+

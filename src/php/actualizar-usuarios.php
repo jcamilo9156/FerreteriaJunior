@@ -36,12 +36,8 @@ if ($ejecucion) { ?>
 </html>
   
  <?php   
+}else {
+    echo"Ha ocurrido un error y no se ha actualizado la información";
 }
-
- 
-
-
-
-
 }
 ?>
