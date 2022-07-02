@@ -31,7 +31,7 @@ include('src/php/fecha-actual.php');
  
 <div>
     <label for="name">Nombre Producto</label><span class="required">*</span><br>
-    <input type="text" name="nombre-producto" id="name" placeholder="Cemento Argos x 50 kg" class="input-formularios" autofocus>
+    <input type="text" name="nombre-producto" id="name" class="input-formularios" autofocus>
 </div>
 <div>
     <label for="proveedor">Proveedor</label><span class="required">*</span><br>

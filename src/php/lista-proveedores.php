@@ -5,7 +5,7 @@
     ?>
     <?php
                    foreach ($ejecutar as $opciones): ?>
-
+                  
                    <option value=" <?php echo $opciones['Nombre'] ?>"><?php echo $opciones['Nombre'] ?></option>
                        
                  <?php endforeach 

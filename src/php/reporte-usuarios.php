@@ -38,8 +38,8 @@ th{
    <center><h1>Reporte de usuarios del sistema</h1></center> 
 <?php
 
-include('src/php/conexion.php');
-include('src/php/buscar-usuario.php');
+include('conexion.php');
+include('buscar-usuario.php');
 
 $query = "SELECT * FROM usuarios";
 $ejecucion = mysqli_query($conexion, $query); ?>
@@ -86,7 +86,7 @@ $html = ob_get_clean();
 // echo $html; 
 // Ingresamos Dom PDF
 
-require_once ('libreria/dompdf/autoload.inc.php');
+require_once ('../../Libreria/dompdf/autoload.inc.php');
 use Dompdf\Dompdf;
 use Dompdf\Css\Stylesheet;
 $dompdf = new Dompdf();

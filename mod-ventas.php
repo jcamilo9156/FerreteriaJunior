@@ -28,8 +28,7 @@
         </h1>   
         <div class="contenedor-busqueda">
          <form action="mod-ventas.php" method="POST">
-            <label for=""><center><p>Búsqueda de Producto</p></center></label>
-        <input type="text" class="input-formularios input-ventas" placeholder="Nombre Producto" name="nombre-producto"><br><br>
+            
       
     <center><p>Filtrar por Categoría:</p></center>
     <center><select class="select-formularios" name="categoria-productos"></center> 

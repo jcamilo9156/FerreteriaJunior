@@ -44,7 +44,7 @@ while ($arreglo = mysqli_fetch_array($ejecucion)){?>
 </div>
 <div>
     <label for="id">Identificación</label><span class="required">*</span><br>
-    <input type="text" name="ID" id="id" value ="<?php echo $arreglo['Identificacion'];?>"class="input-formularios" required maxlength="12"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" />
+    <input type="text" name="ID" id="id" readonly value ="<?php echo $arreglo['Identificacion'];?>"class="input-formularios" required maxlength="12"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" />
 </div>
 <div>
     <label for="name">Dirección</label><span class="required">*</span><br>

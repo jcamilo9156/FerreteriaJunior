@@ -1,5 +1,4 @@
 <?php
-session_start();
 ob_start();
 if (isset($_POST ['boton_login']))
 {
@@ -35,7 +34,19 @@ $_SESSION ['sesion_exitoso'] =0;
       while ($consulta = mysqli_fetch_array($resultado)) 
       {
 $_SESSION ['sesion_exitoso']=1; //Inicio sesión correcto
-header('location:src/php/landing.php');
+// Validamos perfil, si es admin enviamos a landing principal, si es otro usuario a su vista correspondiente
+if ($consulta['Tipo_usuario']== "administrador") {
+  header('location:src/php/landing.php');
+}
+if ($consulta['Tipo_usuario']== "vendedor") {
+  header('location:src/php/landing-vendedor.php');
+}
+if ($consulta['Tipo_usuario']== "almacenista") {
+  header('location:src/php/landing-almacenista.php');
+}
+
+
+
 
       }
   }

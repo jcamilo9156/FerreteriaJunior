@@ -133,7 +133,7 @@ include('src/php/registrar-usuarios.php');
     <input type="text" name="id-busqueda" class="input-formularios" maxlength="10">
     <input type="submit" value="Consultar" class="botones-busqueda" name="consulta-usuarios">
     <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-users">
-    <a href="reportes.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
+    <a href="src/php/reporte-usuarios.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
 </form>
 
         <div class='tablas'>

@@ -35,8 +35,9 @@ if (isset($_POST['consulta-producto'])) {
      echo "<td>";echo $consulta['Fecha_ingreso'];echo "</td>";
     echo  "<td>";echo $consulta['Proveedor'];echo "</td>";
      echo "<td>
-         <a href='src/php/borrar-cliente.php?Id_cliente=".$consulta['Id_producto']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
-         <input type='submit'value='Editar' class='botones-tablas-editar'>
+         <a href='src/php/borrar-producto.php?Id_producto=".$consulta['Id_producto']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
+         <a href='src/php/modificar-producto.php?Id_producto=".$consulta['Id_producto']."'><input type='submit' value='Editar' class='botones-tablas-editar'></a>
+
      </td>
      </tr>";
   }
@@ -79,7 +80,8 @@ if (isset($_POST['consulta-todos-productos'])){
         echo  "<td>";echo $consulta['Proveedor'];echo "</td>";
          echo "<td>
              <a href='src/php/borrar-producto.php?Id_producto=".$consulta['Id_producto']."'><input type='submit' value='Borrar' class='botones-tablas-borrar'onclick='return confirmdelete()'></a>
-             <input type='submit'value='Editar' class='botones-tablas-editar'>
+             <a href='src/php/modificar-producto.php?Id_producto=".$consulta['Id_producto']."'><input type='submit' value='Editar' class='botones-tablas-editar'></a>
+
          </td>
          </tr>";
 }

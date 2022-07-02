@@ -122,7 +122,7 @@ include('src/php/proveedores.php');
     <input type="submit" value="Consultar" class="botones-busqueda proveedor" name="consulta-proveedor">
   
   <input type="submit" value="Consultar todos" class="botones-busqueda" name="consulta-todos-proveedores">
-  <a href="src/php/reporte-inventario.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
+  <a href="src/php/reporte-proveedores.php" class="generar-pdf"><i class="fa-solid fa-file-pdf icono-pdf"></i>Generar PDF</a>
 
   </form>
 </div>
