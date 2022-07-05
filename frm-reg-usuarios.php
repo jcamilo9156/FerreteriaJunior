@@ -17,8 +17,10 @@
     <div class="main-container">
         <header>
             <div class="header-bienvenida">
-        
-          <a href="src/php/opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="src/php/landing.php"><i class="fa-solid fa-house user" title="Ir a inicio"></i></a><a href="src/php/logout.php"><i class="fa-solid fa-right-to-bracket logout"title ="Cerrar Sesión"></i></a>
+            <?PHP
+include('src/php/fecha-actual.php');
+                ?>
+         <a href="src/php/landing.php"><i class="fa-solid fa-house user" title="Ir a inicio"></i></a><a href="src/php/logout.php"><i class="fa-solid fa-right-to-bracket logout"title ="Cerrar Sesión"></i></a>
 
             </div>
         </header>

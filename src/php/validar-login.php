@@ -34,7 +34,8 @@ $_SESSION ['sesion_exitoso'] =0;
       while ($consulta = mysqli_fetch_array($resultado)) 
       {
 $_SESSION ['sesion_exitoso']=1; //Inicio sesión correcto
-// Validamos perfil, si es admin enviamos a landing principal, si es otro usuario a su vista correspondiente
+// Validamos perfil, si es admin enviamos a landing principal, 
+//si es otro usuario a su vista correspondiente
 if ($consulta['Tipo_usuario']== "administrador") {
   header('location:src/php/landing.php');
 }

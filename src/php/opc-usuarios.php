@@ -28,8 +28,6 @@
 <label for="user">Usuario </label>
 
 <input type="text"  class="input-formularios usuario" name="userid" id="user"><br>
-<label for="passactual">Digitar Contraseña Actual<span class="required">*</span></label>
-<input type="password"  maxlength ="10" class="input-formularios" name="passactual" id="passactual"><br>
 <label for="password1">Digitar Nueva Contraseña<span class="required">*</span></label>
 <input type="password"  maxlength ="10" class="input-formularios" name="password1" id="password1"><br>
 <label for="password2">Confirmar Contraseña<span class="required">*</span></label>

@@ -28,7 +28,7 @@
 
 
 
-          <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Opciones de usuario"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
+          <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Cambios de contraseña"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>
     

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,27 +21,27 @@ session_start();
    <header>
    <div class="header-bienvenida">
        <?php
-    
        include('fecha-actual.php');
-       include('validar-login.php');
   ?>
-         <a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
+<a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>
     
     <h1 class="titulo-landing">¿Qué deseas hacer?</h1>
 
     <div class="main-container">
-        <div class="contenedor-opciones-almacenista">
+        <div class="contenedor-opciones">
+               
         <div>
-            <a href="../../frm-gest-inventario.php"><span class="material-icons-outlined iconos-opciones"> inventory</span></a><p>Gestionar Inventario</p>
+            <a href="../../frm-gest-clientes.php"><span class="material-icons iconos-opciones"> people</span></a><p>Gestionar Clientes</p>
         </div>
-    
+     
         <div>
-            <a href="../../frm-gest-proveedores.php"><span class="material-icons iconos-opciones"> person_search</span></a><p>Gestionar Proveedores</p>
+        <a href="../../mod-ventas.php"><span class="material-icons-outlined iconos-opciones">point_of_sale</span></a> <p>Módulo de Ventas</p>
         </div>
+       
     </div>
-
+        </div>
     <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
     <script src= "../js/inactividad.js"></script>
