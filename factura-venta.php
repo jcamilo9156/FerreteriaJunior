@@ -1,3 +1,15 @@
+<?php
+$id = $_GET['idproducto'];
+$precio= $_GET['precio'];
+$stock= $_GET['stock'];
+
+echo "El id es" .$id;
+echo "El precio es" .$precio;
+
+
+
+?>
+<!--
 <!DOCTYPE html>
 <html lang="es">
 <head>

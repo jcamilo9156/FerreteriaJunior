@@ -21,9 +21,9 @@ $consulta = "SELECT * FROM productos WHERE Categoria = '$cat_producto'";
 $ejecucion = mysqli_query($conexion, $consulta);
 // echo $consulta;
 WHILE($arreglo = mysqli_fetch_array($ejecucion)){?>
-    
+    <form action="#" method="POST">
     <div class="caja-producto">
-    <input type ="hidden" value="<?php echo $arreglo['Id_producto'];?>">
+    <input type ="hidden" name="idproducto"  value="<?php echo $arreglo['Id_producto'];?>">
     <div class="caja-imagen">
       <img src="<?php echo $arreglo['Foto'];?>">
     </div>
@@ -32,21 +32,64 @@ WHILE($arreglo = mysqli_fetch_array($ejecucion)){?>
     <p>Stock</p><p class="estado-producto"><?php echo $arreglo['Stock'];?></p>
     </div>
     <div class="contenido">
-        
-    <p>Cantidad a facturar</p><input class="input-cant-venta" type="text" name="cantidad"> 
+    <p>Cantidad a facturar</p><input class="input-cant-venta" type="text" name="cantidad" required> 
     </div>
     <div class="contenido">
         <p>Precio:  $<?php echo $arreglo['Precio'];?>
     </div>
-    <?php echo "
-    <a href='#?idproducto =".$arreglo['Id_producto']."'><input type='submit' name='añadir-producto' value='Añadir producto' class='boton-añadir-carrito'></a>";?>
+    
+    <input type='submit' name='añadir-producto' value='Añadir producto' class='boton-añadir-carrito'>
+
+
+  <!--  /*<a href='factura-venta.php?cantidad=cantidad&idproducto=".$arreglo['Id_producto']."&precio=".$arreglo['Precio']."&stock=".$arreglo['Stock']."'><input type='submit' name='añadir-producto' value='Añadir producto' class='boton-añadir-carrito'></a>";?>!-->
     </div>    
     </form>
     <?php
 } 
 }
+if (isset($_POST['añadir-producto'])) {
+  $idproducto = $_POST['idproducto'];
+  $cantidad = $_POST['cantidad'];
+  include ('src/php/conexion.php');
+$consulta = "SELECT * FROM productos WHERE Id_producto = '$idproducto'";
+$ejecucion = mysqli_query($conexion, $consulta);
+while ($arreglo = mysqli_fetch_array($ejecucion)) {
+  $nombreproducto = $arreglo['Nombre'];
+  $preciound = $arreglo['Precio'];
+  $subtotal = $cantidad*$arreglo['Precio'];
+  $impuesto = 0.19;
+  $total= $subtotal+$subtotal*$impuesto;
+  $nuevostock = $arreglo['Stock']-$cantidad;
+  $consulta = "INSERT INTO ventas(cantidad, nombre_producto, precio_unitario, subtotal, total)
+   VALUES('$cantidad','$nombreproducto','$preciound','$subtotal','$total')";
+   $ejecucion = mysqli_query($conexion, $consulta);
+
+   //reducir stock si oprimo añadir producto
+
+   $consulta = "UPDATE productos SET Stock = '$nuevostock' WHERE Id_producto = '$idproducto'";
+   $ejecucion = mysqli_query($conexion, $consulta);
 
 
+   //echo $consulta; "<br>";
+   //echo $impuesto;
+   //echo " el subtotal es: ".$subtotal; "<br>";
+   //echo "El total con impuesto es: ".$total;
+
+if ($ejecucion) {
+  echo "
+  <div class='avisos'>
+  Se ha agregado el producto:" .$arreglo['Nombre']. "y la cantidad es: " .$cantidad;
+  echo"
+  Si deseas continuar con la compra haz click en buscar para encontrar un nuevo producto, 
+  si quieres seguir al proceso de facturación, haz click en el botón finalizar venta, 
+  el nuevo stock del producto
+  </div>";
+} else {
+  echo "Hubo un error al agregar el producto";
+}
+
+}
+}
 ?>
 </body>
 </html>

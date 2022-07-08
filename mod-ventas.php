@@ -39,6 +39,7 @@ include ('src/php/categorias.php');
 </select>
 <div>
 <input type="submit" name="busqueda-producto-modulo-ventas" value="Buscar" class="boton-busqueda-ventas">
+<input name="busqueda-producto-modulo-ventas" value="Ir a Facturación" class="boton-busqueda-ventas">
 </div>
 </div>
 </form>
