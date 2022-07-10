@@ -41,21 +41,52 @@ td{
     .botones-factura{
         text-align: center;
         margin-top: 55px;
+       
     }
-input{   
+
+.botones-factura input{   
     border-radius: 4px;
     padding: 4px;
 border:2px solid rgb(141, 0, 0);
+background-color: red;
+font-weight: bold;
 }
-input:hover{
-    color: wheat;
-    background-color: red;
+.botones-factura input:hover{
+ color: white;
+    
 }
 .boton-volver{
     border-radius: 4px;
     padding: 3px;
-    background-color:#4395F6
+    background-color:#4395F6;
+    font-weight: bold;
 }
-.boton-volver:hover{
-    color: wheat;
+
+.borrar-pedido{
+  color: red;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+.campo-busqueda{
+    margin-top: 20px;
+    display: flex;
+justify-content: space-around;
+    flex-direction: row;
+    
+    
+}
+.campo-busqueda input{
+    margin-left: 10px;
+    height: 20px;
+    text-align: center;
+}
+.campo-busqueda
+.buscar-cliente{
+    height: 30px;
+    width: 60px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: gray;
 }

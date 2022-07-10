@@ -1,12 +1,13 @@
 <?php
         include ('conexion.php');
-    $consulta = "SELECT * FROM categorias";
+    $consulta = "SELECT Nombres, Apellidos FROM usuarios WHERE Tipo_usuario ='vendedor'";
     $ejecutar = mysqli_query($conexion, $consulta) or die(mysqli_error($conexion));
     ?>
+    <option value="">Seleccione un vendedor</option>
     <?php
                    foreach ($ejecutar as $opciones): ?>
 
-                   <option value=" <?php echo $opciones['Categoria'] ?>"><?php echo $opciones['Categoria'] ?></option>
+                   <option value="Nombres y Apellidos"><?php echo $opciones['Nombres']."  ".$opciones['Apellidos'] ?></option>
                        
                  <?php endforeach ?>
 
