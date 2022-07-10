@@ -30,7 +30,7 @@
          <form action="mod-ventas.php" method="POST">
             
       
-    <center><p>Filtrar por Categoría:</p></center>
+     <center><p>Filtrar por Categoría:</p></center>
     <center><select class="select-formularios" name="categoria-productos"></center> 
         <?php
 include ('src/php/categorias.php');
