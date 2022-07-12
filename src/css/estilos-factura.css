@@ -12,6 +12,9 @@
         box-sizing: border-box;
         font-family: 'PT Sans';
     }
+    body{
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    }
     /* Fin Globales */
 
 .main-container
@@ -50,6 +53,7 @@ td{
 border:2px solid rgb(141, 0, 0);
 background-color: red;
 font-weight: bold;
+
 }
 .botones-factura input:hover{
  color: white;
@@ -70,10 +74,13 @@ a{
     color: red;
 }
 .campo-busqueda{
+    margin:auto;
     margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
 justify-content: space-around;
-    flex-direction: row;
+ width: 100%;
     
     
 }
@@ -81,6 +88,7 @@ justify-content: space-around;
     margin-left: 10px;
     height: 20px;
     text-align: center;
+   
 }
 .campo-busqueda
 .buscar-cliente{
@@ -90,3 +98,12 @@ justify-content: space-around;
     border-radius: 5px;
     border-color: gray;
 }
+.avisos{
+    margin-top: 10px;
+    margin-bottom: 20x;
+    font-size: 20px;
+    color: rgb(146, 25, 25);
+    text-align: center;
+    font-weight: bold;
+
+ }

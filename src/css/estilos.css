@@ -572,13 +572,14 @@ img{
     color: grey;
 }
 .boton-añadir-carrito{
-    margin-top: 30px;
+   margin-top: 20px; 
 margin-left: 35px;
 
 cursor: pointer;
     background:#c7bb1a;
     font-weight: bold;
     width: 130px;
+    position: absolute;
 
 }
 .boton-añadir-carrito:hover{

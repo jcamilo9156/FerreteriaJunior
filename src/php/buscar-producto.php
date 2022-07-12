@@ -29,7 +29,7 @@ if (isset($_POST['consulta-producto'])) {
     echo "<td>";echo $consulta['Categoria'];echo "</td>";
      echo "<td>";echo"$";echo $consulta['Precio'];echo "</td>";
     echo  "<td>";echo"$";echo $consulta['Precio_Dia_Alquiler']; echo "</td>";
-     echo "<td>";echo $consulta['Stock']; echo "</td>";
+     echo "<td>";echo $consulta['Stock']; echo "</td>"; 
      echo "<td>";echo $consulta['Ubicacion']; echo "</td>";
      echo "<td>";echo $consulta['Detalle_Producto']; echo "</td>";
      echo "<td>";echo $consulta['Fecha_ingreso'];echo "</td>";

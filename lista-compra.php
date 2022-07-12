@@ -102,6 +102,7 @@ echo "
     <div>
    <?php
    include('src/php/continuar-compra.php');
+   include('src/php/prueba.php');
    ?>
     </div>
 

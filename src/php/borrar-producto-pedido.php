@@ -16,11 +16,11 @@ $ejecucion = mysqli_query($conexion, $sentencia) or die("Error" .mysqli_error($c
         $stock_final= $arreglo['Stock']+$devolver_stock; //Obtengo el stock actual luego del pedido y le sumo la cantidad devuelta
     $sentencia_actualizar_stock = "UPDATE productos Set Stock = '$stock_final' WHERE Nombre = '$nombre_producto'";
     $ejecucion = mysqli_query($conexion, $sentencia_actualizar_stock);
-    echo "Se han devuelto ".$devolver_stock."articulos, ahora el stock es de:  ".$stock_final;
+    header('location:../../lista-compra.php');
     }
    
 }
 
 include('cerrar-conexion.php');
-header('location:../../lista-compra.php');
+
 ?>

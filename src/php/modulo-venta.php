@@ -45,30 +45,59 @@ WHILE($arreglo = mysqli_fetch_array($ejecucion)){?>
     </div>    
     </form>
     <?php
-} 
+
+}
+// Comprobamos que la cantidad a añadir no sea de 0 o número negativo 
 }
 if (isset($_POST['añadir-producto'])) {
   $idproducto = $_POST['idproducto'];
   $cantidad = $_POST['cantidad'];
   include ('src/php/conexion.php');
+  $consulta = "SELECT Stock FROM productos WHERE Id_producto = '$idproducto'";
+  $ejecucion = mysqli_query($conexion, $consulta);
+  while ($arreglo=mysqli_fetch_array($ejecucion)) {
+    $stock_actual = $arreglo['Stock'];
+    if ($cantidad >$stock_actual) {
+     echo "<div class='avisos'>
+     No se puede añadir producto ya que no se cuenta con suficiente stock, por favor valide nuevamente
+     </div>";
+     return false;
+    }
+  }
+if ($cantidad <=0) {
+  echo " <div class='avisos'>
+  La cantidad a añadir no puede ser 0
+  </div>";
+  return false;
+}
+
+
+
+
+  include ('src/php/conexion.php');
 $consulta = "SELECT * FROM productos WHERE Id_producto = '$idproducto'";
 $ejecucion = mysqli_query($conexion, $consulta);
+
 while ($arreglo = mysqli_fetch_array($ejecucion)) {
   $nombreproducto = $arreglo['Nombre'];
   $preciound = $arreglo['Precio'];
   $subtotal = $cantidad*$arreglo['Precio'];
   $impuesto = 0.19;
   $total= $subtotal+$subtotal*$impuesto;
-  $nuevostock = $arreglo['Stock']-$cantidad;
+  
   $consulta = "INSERT INTO ventas(cantidad, nombre_producto, precio_unitario, subtotal, total)
    VALUES('$cantidad','$nombreproducto','$preciound','$subtotal','$total')";
    $ejecucion = mysqli_query($conexion, $consulta);
 
-   //reducir stock si oprimo añadir producto
+   // Si el producto ya está, no añadir sino aumentar
 
+
+
+   //reducir stock si oprimo añadir producto
+   $nuevostock = $arreglo['Stock']-$cantidad;
    $consulta = "UPDATE productos SET Stock = '$nuevostock' WHERE Id_producto = '$idproducto'";
    $ejecucion = mysqli_query($conexion, $consulta);
-
+header('location:src/php/modulo-venta.php');
 
    //echo $consulta; "<br>";
    //echo $impuesto;
