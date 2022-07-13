@@ -2,12 +2,12 @@
 
 // Si hago click en continuar compra me despliega las opciones de búsqueda cliente y vendedor
 
-if (isset($_POST['finalizar_venta'])) {
+if (isset($_POST['continuar_venta'])) {
     echo " <div class='campo-busqueda'>";?>
     <form action="lista-compra.php" method="POST">
     Buscar Cliente <input type="text" name="idcliente" placeholder="Identificación" minlength="10"  maxlength="10" required autofocus>
     <input type="submit" name="buscar-cliente" value="Buscar" class="buscar-cliente">
-    Vendedor: <select name="select_vendedor" id="">
+    Vendedor: <select name="select_vendedor" id="" required>
 <?php
             include ('lista-vendedores.php'); ?>
             </select>

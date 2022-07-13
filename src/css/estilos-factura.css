@@ -43,7 +43,7 @@ td{
 
     .botones-factura{
         text-align: center;
-        margin-top: 55px;
+        margin-top: 10px;
        
     }
 
@@ -65,7 +65,9 @@ font-weight: bold;
     background-color:#4395F6;
     font-weight: bold;
 }
-
+.boton-finalizar{
+    height: 50px;
+}
 .borrar-pedido{
   color: red;
 }
@@ -76,8 +78,7 @@ a{
 .campo-busqueda{
     margin:auto;
     margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+margin-bottom: 90px;
     display: flex;
 justify-content: space-around;
  width: 100%;
@@ -106,4 +107,22 @@ justify-content: space-around;
     text-align: center;
     font-weight: bold;
 
+ }
+ .caja-resultado{
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    border-style: solid;
+    border-radius: 15px;
+    border-color:#2f7bd8;
+padding: 10px;
+font-weight: bold;
+display: flex;
+flex-direction: column;
+
+ }
+ .check-compra{
+    margin-left: 5px;
+    color: forestgreen;
  }

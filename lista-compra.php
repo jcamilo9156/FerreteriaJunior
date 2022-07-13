@@ -93,7 +93,7 @@ echo "
     </table>
     
     <div class="botones-factura">
-    <input type="submit" name="finalizar_venta" value="Continuar venta">
+    <input type="submit" name="continuar_venta" value="Continuar venta">
    <button type="submit" name="volver_a_ventas"class="boton-volver">Volver a módulo ventas</button>
     </div>
     </form>
@@ -102,7 +102,7 @@ echo "
     <div>
    <?php
    include('src/php/continuar-compra.php');
-   include('src/php/prueba.php');
+   include('src/php/buscar-cliente-compra.php');
    ?>
     </div>
 
@@ -120,5 +120,6 @@ echo "
     <script src='https://kit.fontawesome.com/655f5b609a.js' crossorigin='anonymous'></script>
     <script src= '../js/inactividad.js'></script>
     <script src="src/js/funcion-borrar.js"></script> 
+    <script src="src/js/terminar_venta.js"></script> 
 </body>
 </html>

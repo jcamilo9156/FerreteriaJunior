@@ -6,8 +6,9 @@
     <option value="">Seleccione un vendedor</option>
     <?php
                    foreach ($ejecutar as $opciones): ?>
+<option> <?php echo $opciones['Nombres'] ."  " .$opciones['Apellidos']; ?>
+</option>
 
-                   <option value="Nombres y Apellidos"><?php echo $opciones['Nombres']."  ".$opciones['Apellidos'] ?></option>
                        
                  <?php endforeach ?>
 
