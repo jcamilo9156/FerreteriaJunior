@@ -15,18 +15,21 @@ ob_start();
            margin-left: 0;
            margin-right: 0;
        }
+      
        h1{
-           color: red;
-        font-family:sans-serif;
-       }
-       th {
-           background-color: red;
-       }
 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+           color: red;
+       }
+      
 td,th{
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: black 1px solid;
     width: 5%;
+    text-align: center;
+    padding: 5px;
+    
 }
 th{
     background-color: #c7bb1a;

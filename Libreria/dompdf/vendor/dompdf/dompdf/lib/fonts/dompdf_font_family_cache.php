@@ -81,5 +81,11 @@ return array (
   'pt sans' => array(
     'normal' => $fontDir . '/pt_sans_normal_fa52bdbac54dbb0189884934fe13d6a1',
   ),
+  'material icons' => array(
+    'normal' => $fontDir . '/material_icons_normal_14bfeb2ad4c74995bd60af58f9cd0fc0',
+  ),
+  'open sans' => array(
+    'normal' => $fontDir . '/open_sans_normal_bf11512877ef2223afd06e89358ef2fc',
+  ),
 );
 }; ?>

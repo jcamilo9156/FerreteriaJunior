@@ -8,13 +8,19 @@ if (isset($_POST['continuar_venta'])) {
     Buscar Cliente <input type="text" name="idcliente" placeholder="Identificación" minlength="10"  maxlength="10" required autofocus>
     <input type="submit" name="buscar-cliente" value="Buscar" class="buscar-cliente">
     Vendedor: <select name="select_vendedor" id="" required>
+
 <?php
             include ('lista-vendedores.php'); ?>
             </select>
-
+            Forma de pago: <select name= "forma_pago" required>
+          <option>Efectivo</option>
+          <option>Crédito</option>
+          <option>Tarjeta Débito</option>
+          <option>Tarjeta Crédito</option>
+      </select>    
             <?php 
           
-        
+       
         
         }
          echo "</div>";
