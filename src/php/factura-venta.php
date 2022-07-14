@@ -3,8 +3,6 @@ ob_start();
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -164,13 +162,16 @@ while ($arreglo = mysqli_fetch_array($ejecucion)) {
 $subtotal= $subtotal+$arreglo['subtotal']; 
 $iva = $subtotal*0.19; //calculamos el iva tomando el subtotal y aplicando el 19%
 $total = $subtotal+$iva;  // sumamos el subtotal y  el iva dando el total de la venta
+$nombre_producto = $arreglo['nombre_producto'];
 echo " <tr>
 <td>$arreglo[cantidad]</td>
 <td>$arreglo[nombre_producto]</td>
 <td>$arreglo[precio_unitario]</td>
 <td>$arreglo[subtotal]</td>
 
-</tr>" ; ?> <?php } ?>
+</tr>" ;
+
+} ?>
 
 
 
@@ -212,13 +213,34 @@ echo " <tr>
        
         <div class="final-factura">
             <h2>Gracias por su compra</h2>
-            <p><b>Recuerde que tiene 48 horas para realizar cualquier reclamo, pasado ese tiempo no se aceptan reclamaciones.</p>
+            <p><b>Recuerde que tiene 48 horas para realizar cualquier reclamo,
+                 pasado ese tiempo no se aceptan reclamaciones.</p>
         </div>
 </body>
 </html>
 
 <?php
 
+$consulta = "SELECT * FROM ventas";
+$ejecucion = mysqli_query($conexion, $consulta);
+while ($arreglo=(mysqli_fetch_array($ejecucion))) {
+    $cantidad = $arreglo['cantidad'];
+    $nombre = $arreglo['nombre_producto'];
+    $consulta = "INSERT INTO factura_venta(fecha_venta, nombre_vendedor, nombre_cliente,
+    cantidad, descripcion, valor_unitario, subtotal, total, forma_pago)VALUES ('$arreglo[fecha]',
+    '$vendedor','$cliente', '$arreglo[cantidad]','$arreglo[nombre_producto]','$arreglo[precio_unitario]',
+    '$arreglo[subtotal]','$arreglo[total]','$forma_pago')";
+$ejecucion = mysqli_query($conexion, $consulta);
+return true;
+
+    
+    
+}
+
+
+
+//}
+/*
 $html = ob_get_clean(); 
  //echo $html; 
  //Ingresamos Dom PDF
@@ -243,4 +265,8 @@ $dompdf->setPaper('LETTER', 'horizontal');
 $dompdf ->render();
 $dompdf ->stream("archivo_.pdf", array("Attachment" =>false));
 
+?>
+<?php
+echo "hay ".$arreglo['cantidad'];
+*/
 ?>

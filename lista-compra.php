@@ -24,7 +24,17 @@
 <form action="lista-compra.php" method="POST">
 <table class='table'>
 <tr>
-
+    <?php
+include ('src/php/conexion.php');
+$consulta = "SELECT * FROM ventas";
+$ejecucion = mysqli_query($conexion, $consulta);
+$row_cnt = $ejecucion->num_rows;
+if ($row_cnt ==0) {
+    echo " <div class='avisos'>
+    No hay ningún producto agregado al pedido, haga click <a href='mod-ventas.php'>aqui</a> para volver al módulo de venta y agregar un producto.
+    </div>";
+    return false;
+}?>
 <thead>
             <th>Cantidad</th>    
             <th>Descripción</th>
@@ -36,9 +46,7 @@
 
 
     <?php
-include ('src/php/conexion.php');
-$consulta = "SELECT * FROM ventas";
-$ejecucion = mysqli_query($conexion, $consulta);
+
 $subtotal = 0; // Inicializo variable en 0 para que sume el valor de las filas que existan
 while ($arreglo = mysqli_fetch_array($ejecucion)) {
 $subtotal= $subtotal+$arreglo['subtotal']; 

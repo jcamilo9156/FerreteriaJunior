@@ -97,7 +97,7 @@ while ($arreglo = mysqli_fetch_array($ejecucion)) {
    $nuevostock = $arreglo['Stock']-$cantidad;
    $consulta = "UPDATE productos SET Stock = '$nuevostock' WHERE Id_producto = '$idproducto'";
    $ejecucion = mysqli_query($conexion, $consulta);
-header('location:src/php/modulo-venta.php');
+
 
    //echo $consulta; "<br>";
    //echo $impuesto;
@@ -107,12 +107,11 @@ header('location:src/php/modulo-venta.php');
 if ($ejecucion) {
   echo "
   <div class='avisos'>
-  Se ha agregado el producto:" .$arreglo['Nombre']. "y la cantidad es: " .$cantidad;
-  echo"
-  Si deseas continuar con la compra haz click en buscar para encontrar un nuevo producto, 
-  si quieres seguir al proceso de facturación, haz click en el botón finalizar venta, 
-  el nuevo stock del producto
+  Producto añadido correctamente, si deseas continuar con la compra haz click en buscar para encontrar un nuevo producto, 
+  si quieres seguir al proceso de facturación, haz click en el botón ir a facturación.
+ 
   </div>";
+  return true;
 } else {
   echo "Hubo un error al agregar el producto";
 }
