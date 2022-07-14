@@ -18,14 +18,9 @@ echo "
 <div class=''>Vendedor: " .$vendedor. "<i class='fa-solid fa-check check-compra'></i></div>";
 while ($arreglo = mysqli_fetch_array($ejecucion)) {
     
-    echo " <div> Cliente : $arreglo[Nombres]  $arreglo[Apellidos] <i class='fa-solid fa-check check-compra'></i></div>";
-    echo " Tipo de cliente :" .$arreglo['Tipo_cliente']. "</div></div>";
-    echo "  <div class='botones-factura boton-finalizar'><input type='submit' name='finalizar_venta' value='Finalizar venta' autofocus onclick='return terminar_venta()' </div>";
+    echo " <div> Cliente: $arreglo[Nombres]  $arreglo[Apellidos] <i class='fa-solid fa-check check-compra'></i></div>";
+    echo " Tipo de cliente:" .$arreglo['Tipo_cliente']. "</div></div>";
+    echo "  <div class='botones-factura boton-finalizar'><a href='factura-venta.php'><input type='submit' name='finalizar_venta' value='Finalizar venta' autofocus onclick='return terminar_venta()' </a></div>";
 }
 }
 
-if (isset($_POST['finalizar-venta'])) {
-    echo "Click";
-}    
-
-    ?>
