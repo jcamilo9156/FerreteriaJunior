@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'ferreteriajunior'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA1B5BAE23784689BD3FD41D1C21055C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3DEA49313AE64FABB0061267CA9A9EFF }}
           package: .
