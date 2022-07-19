@@ -50,7 +50,7 @@ if ($consulta['Tipo_usuario']== "almacenista") {
 
 
       }
-  }
+    }
 
   if ($_SESSION ['sesion_exitoso']<>1) 
    {

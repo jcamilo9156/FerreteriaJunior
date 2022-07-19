@@ -32,31 +32,36 @@
         </div>
     </header>
     
-    <h1 class="titulo-landing">¿Qué deseas hacer?</h1>
-
-    <div class="main-container">
-        <div class="contenedor-opciones">
-                <div>
-            
-                  <a href="../../frm-reg-usuarios.php">  <span class="material-icons-outlined iconos-opciones">groups</span></a><p>Gestionar Usuarios</p>
-                
-                </div>
-        <div>
-            <a href="../../frm-gest-clientes.php"><span class="material-icons iconos-opciones"> people</span></a><p>Gestionar Clientes</p>
-        </div>
-        <div>
-            <a href="../../frm-gest-inventario.php"><span class="material-icons-outlined iconos-opciones"> inventory</span></a><p>Gestionar Inventario</p>
-        </div>
-        <div>
-        <a href="consultar-ventas.php"><span class="material-icons-outlined iconos-opciones">
-query_stats
-</span></a><p>Consultar ventas</p>
-        </div>
-        <div class="ultima">
-            <a href="../../frm-gest-proveedores.php"><span class="material-icons iconos-opciones"> person_search</span></a><p>Gestionar Proveedores</p>
-        </div>
+    <h1 class="titulo-landing">Módulo Consulta de Ventas</h1>
+    <div class="contenedor-modulo_busqueda-venta">
+      <div class="contenedor-busqueda-venta">
+        <form action="consultar-ventas.php" method="POST">
+        Buscar por vendedor
+        <select>
+            <?php include('lista-vendedores.php')?>
+        </select>
+        <input type="submit"name="buscar-venta" value="Buscar">
+      </div>
+  
+    <div class="contenedor-busqueda-venta">
+        Buscar por forma de pago
+        <select>
+            <option>Efectivo</option>
+            <option>Crédito</option>
+            <option>Tarjeta Crédito</option>
+            <option>Tarjeta Débito</option>
+        </select>
+        <input type="submit"name="buscar-" value="Buscar">
+      </div>
+      </form>
     </div>
-        </div>
+    <?php 
+
+include('buscar-ventas.php');
+
+
+?>
+    </div>
     <footer class="footer-forms">Copyright 2022 Juan Quezada</footer>
     <script src="https://kit.fontawesome.com/655f5b609a.js" crossorigin="anonymous"></script>
     <script src= "../js/inactividad.js"></script>

@@ -233,8 +233,6 @@ while ($arreglo=(mysqli_fetch_array($ejecucion))) {
 $ejecucion = mysqli_query($conexion, $consulta);
 return true;
 
-    
-    
 }
 
 

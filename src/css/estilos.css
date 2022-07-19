@@ -266,7 +266,16 @@ margin-bottom: 40px;
    
 }
  }
+/* Módulo consulta ventas (Admin) */
+.contenedor-modulo_busqueda-venta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contenedor-busqueda-venta{
 
+
+}
  
 /* Cierre Landing /*
 
