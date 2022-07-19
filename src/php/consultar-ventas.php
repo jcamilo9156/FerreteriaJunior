@@ -23,11 +23,7 @@
        <?php
        include('fecha-actual.php');
   ?>
-
-
-
-
-
+   <a href="landing.php"><i class="fa-solid fa-house  home " title="Ir a Inicio"></i></a>
           <a href="opc-usuarios.php"><i class="fa-solid fa-circle-user user" title="Cambios de contraseña"></i></a><a href="logout.php"><i class="fa-solid fa-right-to-bracket logout" title ="Cerrar Sesión"></i></a>
         </div>
     </header>
@@ -36,22 +32,24 @@
     <div class="contenedor-modulo_busqueda-venta">
       <div class="contenedor-busqueda-venta">
         <form action="consultar-ventas.php" method="POST">
-        Buscar por vendedor
-        <select>
+       <b> Buscar por vendedor</b>
+        <select name="nombre-vendedor">
             <?php include('lista-vendedores.php')?>
         </select>
-        <input type="submit"name="buscar-venta" value="Buscar">
+        <input type="submit"name="buscar-venta" value="Buscar" class="inputs-buscar-venta">
       </div>
   
     <div class="contenedor-busqueda-venta">
-        Buscar por forma de pago
-        <select>
+       <b> Buscar por forma de pago</b>
+        <select name="forma_pago">
+        <option>Seleccione forma de pago</option>
             <option>Efectivo</option>
             <option>Crédito</option>
             <option>Tarjeta Crédito</option>
             <option>Tarjeta Débito</option>
         </select>
-        <input type="submit"name="buscar-" value="Buscar">
+        <input type="submit"name="buscar-forma_pago" value="Buscar" class="inputs-buscar-venta">
+       
       </div>
       </form>
     </div>

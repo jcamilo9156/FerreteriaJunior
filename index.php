@@ -1,3 +1,7 @@
+<?php  
+            include('src/php/validar-login.php');       
+            ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,13 +33,6 @@
           * Debe contener al menos un número ">
         </div>
         <button type="submit" class="boton-login" name="boton_login"> Iniciar Sesión </button>
-            <?php
-            
-            include('src/php/validar-login.php');
-            
-            ?>
-              
-  
         </form>
         
     </div>
