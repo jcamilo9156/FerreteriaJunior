@@ -7,7 +7,7 @@ if (isset($_POST['buscar-cliente'])) {
     $Date = date('d-m-Y H:i');
     $forma_pago = $_POST['forma_pago'];
        include ('conexion.php');
-       $consulta = "SELECT Nombres, Apellidos, Tipo_cliente FROM Clientes WHERE Identificacion = '$idcliente'";
+       $consulta = "SELECT Nombres, Apellidos, Tipo_cliente FROM clientes WHERE Identificacion = '$idcliente'";
 $ejecucion = mysqli_query($conexion, $consulta);
 
 $row_cnt = $ejecucion->num_rows; // Contamos las filas, si no hay registro enviamos error.

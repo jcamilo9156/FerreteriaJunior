@@ -11,7 +11,7 @@ if ($row_cnt==0) {
     </div>";
     return false;
 } else {?>
-    <table class="tablas" cellspacing="0">
+    <table class="tablas" >
     <tr>
             <th>factura #</th>
             <th>fecha de Venta</th>
@@ -35,11 +35,10 @@ while ($arreglo =mysqli_fetch_array($ejecucion)) {?>
     <td><?php echo $arreglo['forma_pago']?></td>
  </tr>
  
- </table> 
 <?php
-}
-
-} if (isset($_POST['buscar-forma_pago'])) {
+}} ?> </table> 
+<?php
+ if (isset($_POST['buscar-forma_pago'])) {
     $forma_pago = $_POST['forma_pago'];
 include('conexion.php');
 $consulta = "SELECT * FROM factura_venta WHERE forma_pago = '$forma_pago'";
@@ -74,9 +73,8 @@ while ($arreglo =mysqli_fetch_array($ejecucion)) {?>
     <td><?php echo " $ " .$arreglo['total']?></td>
     <td><?php echo $arreglo['forma_pago']?></td>
  </tr>
- </table> 
+
  <?php
 }
 
-}
-?>
+} ?></table> 
