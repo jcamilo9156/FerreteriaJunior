@@ -152,7 +152,10 @@ $ejecucion = mysqli_query($conexion, $consulta);
 
 while ($arreglo = mysqli_fetch_array($ejecucion)) {
     $id_factura =$arreglo['id_factura']; // variable consecutivo factura
-
+    $descripcion = $arreglo['descripcion'];
+    $subtotal = $arreglo['subtotal'];
+    $total = $arreglo['total'];
+    $forma_pago = $arreglo['forma_pago'];
 }
 
 ?>
@@ -197,22 +200,27 @@ $nombre_producto = $arreglo['nombre_producto'];
 
 <?php 
 
-$consulta = "SELECT * FROM factura_venta WHERE fecha_venta = '$fecha'";
+// Consultamos la tabla relacionada con la fecha y id factura,
+// si se hacen dos ventas al mismo tiempo sólo me muestra la que corresponde al id actual
+
+$consulta = "SELECT * FROM factura_venta WHERE id_factura = '$id_factura'";
 $ejecucion = mysqli_query($conexion, $consulta);
-echo $consulta;/*
+echo $consulta;
 
 while ($arreglo = mysqli_fetch_array($ejecucion)) {
+
 echo " <tr>
 <td>$arreglo[cantidad]</td>
-<td>$arreglo[nombre_producto]</td>
-<td>$arreglo[precio_unitario]</td>
+<td>$arreglo[descripcion]</td>
+<td>$arreglo[valor_unitario]</td>
 <td>$arreglo[subtotal]</td>
+</tr>" ;} 
 
-</tr>" ;}
 
+
+
+/*
  ?>
-
-
 
 <tr>
     <td class="td-totales"></td>
@@ -220,7 +228,6 @@ echo " <tr>
     <td class="td-totalizador"colspan="">Total Productos a Facturar</td>
     <?php $conteofilas=mysqli_num_rows($ejecucion); ?> <!-- Hacemos conteo de filas para saber el total de articulos -->
     <td class="td-totalizador"><?php echo $conteofilas?></td>
-    
     </tr>
     <tr>
     <td class="td-totales"></td>
@@ -232,9 +239,10 @@ echo " <tr>
     <tr>
     <td class="td-totales"></td>
     <td class="td-totales"></td>
-    <td  class="td-totalizador">Iva 19%</td>
-        <td colspan="" class="td-totalizador">$ <?php echo $iva;?>
-        
+    <td  class="td-totalizador">Iva 19%</td> <?php
+$iva = $subtotal*0.19; //calculamos el iva tomando el subtotal y aplicando el 19%
+
+        ?><td colspan="" class="td-totalizador">$ <?php echo $iva;?>
         
     </tr>
     <tr>
@@ -261,9 +269,9 @@ echo " <tr>
 <?php
 
 $html=ob_get_clean(); 
-echo $html; 
- //Ingresamos Dom PDF*/
- /*require_once ('../../Libreria/dompdf/autoload.inc.php');
+//echo $html; 
+ //Ingresamos Dom PDF
+ require_once ('../../Libreria/dompdf/autoload.inc.php');
  use Dompdf\Dompdf;
  use Dompdf\Css\Stylesheet;
  $dompdf = new Dompdf();
@@ -274,13 +282,13 @@ echo $html;
  
  $dompdf ->loadHtml($html);
  $dompdf->setPaper( [0, 0, 853,582,  283,465]); 
- /* Opciones de papel
- $dompdf->setPaper('letter');
+ /*Opciones de papel
+ $dompdf->setPaper('letter');*/
  $dompdf->setPaper('A4', 'horizontal');
  
  
  $dompdf ->render();
- $dompdf ->stream("archivo_.pdf", array("Attachment" =>false));*/
+ $dompdf ->stream("archivo_.pdf", array("Attachment" =>false));
 
 
 /*
