@@ -283,8 +283,11 @@ $html=ob_get_clean();
  
  
  $dompdf ->render();
- $dompdf ->stream("archivo_.pdf", array("Attachment" =>false));
+ $dompdf ->stream("factura_venta.pdf", array("Attachment" =>false));
 
+ $consulta = "DELETE FROM ventas"; //Borramos el registro de ventas ya que se incluyó en la tabla factura_venta
+ $ejecucion = mysqli_query($conexion, $consulta);
+ return true;
 
 /*
 $consulta = "SELECT * FROM ventas";

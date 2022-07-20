@@ -25,7 +25,7 @@ while ($arreglo = mysqli_fetch_array($ejecucion)) {
     
     echo " <div> Cliente: $arreglo[Nombres]  $arreglo[Apellidos] <i class='fa-solid fa-check check-compra'></i></div>";
     echo " Tipo de cliente:" .$arreglo['Tipo_cliente']. "</div></div>";
-    echo "  <div class='botones-factura boton-finalizar'><a href='src/php/factura-venta.php?cliente=$arreglo[Nombres]  $arreglo[Apellidos]&vendedor=$vendedor&fecha=$Date&forma_pago=$forma_pago'><input type='submit' name='finalizar_venta' value='Finalizar venta' autofocus onclick='return terminar_venta()' </a></div>";
+    echo "  <div class='botones-factura boton-finalizar'><a href='src/php/factura-venta.php?cliente=$arreglo[Nombres]  $arreglo[Apellidos]&vendedor=$vendedor&fecha=$Date&forma_pago=$forma_pago' target='_blank'><input type='submit' name='finalizar_venta' value='Finalizar venta' autofocus onclick='return terminar_venta()' </a></div>";
 }
 }
 
