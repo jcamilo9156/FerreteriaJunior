@@ -1,8 +1,6 @@
 <?php
 ob_start();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -135,7 +133,7 @@ $forma_pago = $_GET['forma_pago']
     <h1>N° Factura: 001</h1>
     <p>Cliente: <?php echo $cliente; ?> </p>
     <p>Vendedor: <?php echo $vendedor; ?></p>
-    <p>Fecha: <?php echo $fecha?></p> 
+    <p>Fecha de generación factura: <?php echo $fecha?></p> 
     <p>Forma de pago: <?php echo $forma_pago?></p> 
 </div>
 </header>
@@ -221,6 +219,30 @@ echo " <tr>
 
 <?php
 
+$html=ob_get_clean(); 
+echo $html; 
+ //Ingresamos Dom PDF*/
+ /*require_once ('../../Libreria/dompdf/autoload.inc.php');
+ use Dompdf\Dompdf;
+ use Dompdf\Css\Stylesheet;
+ $dompdf = new Dompdf();
+ 
+ $options = $dompdf ->getOptions();
+ $options -> set(array('isRemoteEnabled' => true));
+ $dompdf ->setOptions($options);
+ 
+ $dompdf ->loadHtml($html);
+ $dompdf->setPaper( [0, 0, 853,582,  283,465]); 
+ /* Opciones de papel
+ $dompdf->setPaper('letter');
+ $dompdf->setPaper('A4', 'horizontal');
+ 
+ 
+ $dompdf ->render();
+ $dompdf ->stream("archivo_.pdf", array("Attachment" =>false));*/
+
+
+
 $consulta = "SELECT * FROM ventas";
 $ejecucion = mysqli_query($conexion, $consulta);
 while ($arreglo=(mysqli_fetch_array($ejecucion))) {
@@ -231,40 +253,12 @@ while ($arreglo=(mysqli_fetch_array($ejecucion))) {
     '$vendedor','$cliente', '$arreglo[cantidad]','$arreglo[nombre_producto]','$arreglo[precio_unitario]',
     '$arreglo[subtotal]','$arreglo[total]','$forma_pago')";
 $ejecucion = mysqli_query($conexion, $consulta);
-return true;
 
+if ($ejecucion) {
+   $consulta = "DELETE FROM ventas"; //Borramos el registro de ventas ya que se incluyó en la tabla factura_venta
+   $ejecucion = mysqli_query($conexion, $consulta);
+   return true;
 }
-
-
-
-//}
-/*
-$html = ob_get_clean(); 
- //echo $html; 
- //Ingresamos Dom PDF
-
-require_once ('../../Libreria/dompdf/autoload.inc.php');
-use Dompdf\Dompdf;
-use Dompdf\Css\Stylesheet;
-$dompdf = new Dompdf();
-
-$options = $dompdf ->getOptions();
-$options -> set(array('isRemoteEnabled' => true));
-$dompdf ->setOptions($options);
-
-$dompdf ->loadHtml($html);
-//$dompdf->setPaper( [0, 0, 853,582,  283,465]);
-$dompdf->setPaper( [0, 0, 21024,582,  21024,465]);  
-// Opciones de papel
-$dompdf->setPaper('LETTER');
-$dompdf->setPaper('LETTER', 'horizontal');
-
-
-$dompdf ->render();
-$dompdf ->stream("archivo_.pdf", array("Attachment" =>false));
-
-?>
-<?php
-echo "hay ".$arreglo['cantidad'];
-*/
+  
+}
 ?>
