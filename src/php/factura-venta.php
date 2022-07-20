@@ -205,7 +205,7 @@ $nombre_producto = $arreglo['nombre_producto'];
 
 $consulta = "SELECT * FROM factura_venta WHERE id_factura = '$id_factura'";
 $ejecucion = mysqli_query($conexion, $consulta);
-echo $consulta;
+
 
 while ($arreglo = mysqli_fetch_array($ejecucion)) {
 
@@ -215,11 +215,6 @@ echo " <tr>
 <td>$arreglo[valor_unitario]</td>
 <td>$arreglo[subtotal]</td>
 </tr>" ;} 
-
-
-
-
-/*
  ?>
 
 <tr>
