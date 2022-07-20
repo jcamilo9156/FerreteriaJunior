@@ -114,6 +114,57 @@ p{
     font-family: 'PT Sans';
 }
 </style>
+<?php  
+
+// Traigo información básica por get
+
+$fecha = $_GET['fecha'];
+$vendedor = $_GET['vendedor'];
+$cliente = $_GET['cliente'];
+$forma_pago = $_GET['forma_pago'];
+
+// Traigo la info. de la tabla ventas(previo a generación de factura)
+include ('conexion.php');
+$consulta = "SELECT * FROM ventas";
+$ejecucion = mysqli_query($conexion, $consulta);
+
+// Insertamos la información extraída de la tabla ventas en la tabla factura_venta
+
+while ($arreglo = mysqli_fetch_array($ejecucion)) {
+        $cantidad = $arreglo['cantidad'];
+        $nombre = $arreglo['nombre_producto'];
+        $precio_unitario = $arreglo['precio_unitario'];
+        $subtotal = $arreglo['subtotal'];
+        $total = $arreglo['total'];
+
+}
+$consulta = "INSERT INTO factura_venta(fecha_venta, nombre_vendedor, nombre_cliente,
+cantidad, descripcion, valor_unitario, subtotal, total, forma_pago) VALUES ('$fecha',
+'$vendedor','$cliente', '$cantidad','$nombre','$precio_unitario',
+'$subtotal','$total','$forma_pago')";
+$ejecucion = mysqli_query($conexion, $consulta);
+
+
+// Consultamos la tabla factura_venta y asignamos variable para consecutivo de factura
+
+$consulta = "SELECT * FROM factura_venta";
+$ejecucion = mysqli_query($conexion, $consulta);
+
+while ($arreglo = mysqli_fetch_array($ejecucion)) {
+    $id_factura =$arreglo['id_factura']; // variable consecutivo factura
+
+}
+
+?>
+<?php /*
+$subtotal = 0; // Inicializo variable en 0 para que sume el valor de las filas que existan
+while ($arreglo = mysqli_fetch_array($ejecucion)) {
+$subtotal= $subtotal+$arreglo['subtotal']; 
+$iva = $subtotal*0.19; //calculamos el iva tomando el subtotal y aplicando el 19%
+$total = $subtotal+$iva;  // sumamos el subtotal y  el iva dando el total de la venta
+$nombre_producto = $arreglo['nombre_producto'];
+}*/?>
+ 
 <header>
 <div class="header-factura">    
 <H2>Ferreteria Junior S.A.S</H2>
@@ -122,15 +173,8 @@ p{
 <h4>Bogotá - Colombia</h4>
 
 </div>
-<?php  
-$cliente = $_GET['cliente'];
-$vendedor = $_GET['vendedor'];
-$fecha = $_GET['fecha'];
-$forma_pago = $_GET['forma_pago']
-
-?>
 <div class="header-factura2">
-    <h1>N° Factura: 001</h1>
+    <h1>N° Factura: <?php echo $id_factura;?></h1>
     <p>Cliente: <?php echo $cliente; ?> </p>
     <p>Vendedor: <?php echo $vendedor; ?></p>
     <p>Fecha de generación factura: <?php echo $fecha?></p> 
@@ -151,25 +195,22 @@ $forma_pago = $_GET['forma_pago']
     </tr>
 
 
-<?php
-include ('conexion.php');
-$consulta = "SELECT * FROM ventas";
+<?php 
+
+$consulta = "SELECT * FROM factura_venta WHERE fecha_venta = '$fecha'";
 $ejecucion = mysqli_query($conexion, $consulta);
-$subtotal = 0; // Inicializo variable en 0 para que sume el valor de las filas que existan
+echo $consulta;/*
+
 while ($arreglo = mysqli_fetch_array($ejecucion)) {
-$subtotal= $subtotal+$arreglo['subtotal']; 
-$iva = $subtotal*0.19; //calculamos el iva tomando el subtotal y aplicando el 19%
-$total = $subtotal+$iva;  // sumamos el subtotal y  el iva dando el total de la venta
-$nombre_producto = $arreglo['nombre_producto'];
 echo " <tr>
 <td>$arreglo[cantidad]</td>
 <td>$arreglo[nombre_producto]</td>
 <td>$arreglo[precio_unitario]</td>
 <td>$arreglo[subtotal]</td>
 
-</tr>" ;
+</tr>" ;}
 
-} ?>
+ ?>
 
 
 
@@ -242,7 +283,7 @@ echo $html;
  $dompdf ->stream("archivo_.pdf", array("Attachment" =>false));*/
 
 
-
+/*
 $consulta = "SELECT * FROM ventas";
 $ejecucion = mysqli_query($conexion, $consulta);
 while ($arreglo=(mysqli_fetch_array($ejecucion))) {
@@ -260,5 +301,5 @@ if ($ejecucion) {
    return true;
 }
   
-}
+}*/
 ?>
